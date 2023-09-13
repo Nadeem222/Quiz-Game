@@ -36,22 +36,25 @@ const nextButton = document.querySelector("#next");
 const answers = document.querySelectorAll('.answer');
 const showScore = document.querySelector('#showScore');
 const timerDisplay = document.querySelector('#timer');
+const timerH4 = document.getElementsByClassName("time");
 
 let questionCount = -1;
 let score = 0;
 
-let timeLeft = 60; // Time in seconds
+let timeLeft = 1500; // Time in seconds
 
 let timerInterval;
 
 function startTimer() {
-    timerDisplay.textContent = `${timeLeft} seconds`;
+    timerDisplay.textContent = formatTime(timeLeft);
     timerInterval = setInterval(() => {
         timeLeft--;
+
         if (timeLeft < 0) {
-            timeLeft = 0; 
+            timeLeft = 0; // Ensure the time left is not negative
         }
-        timerDisplay.textContent = `${timeLeft} seconds`;
+
+        timerDisplay.textContent = formatTime(timeLeft);
 
         if (timeLeft === 0) {
             endQuiz();
@@ -59,8 +62,16 @@ function startTimer() {
     }, 1000);
 }
 
+function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+}
+
+
 nextButton.style.display = 'none';
 submitButton.style.display = 'none';
+
 
 
 // Load Question function 
