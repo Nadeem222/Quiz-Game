@@ -32,7 +32,7 @@ html{
 input:hover{
     cursor: pointer;
 }
-#submit, .btn{
+#next, #start ,#submit, .btn{
     padding: 10px 30px ;
     outline: none;
     font-size: 20px;
