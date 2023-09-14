@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
@@ -13,7 +16,6 @@ html{
     place-items: center;
 }
 .inner-div{
-    width: 40vw;
     background-color: #fff;
     padding: 30px 80px;
     border-radius: 10px;
@@ -44,6 +46,7 @@ input:hover{
     color: #fff;
     background-color: #74b9ff;
     margin-top: 40px;
+    border-radius: 6px;
 }
 #submit:hover{
     background-color: blanchedalmond;
@@ -56,4 +59,21 @@ input:hover{
 }
 .scoreArea{
     display: none;
+}
+.time> p, .time>span{
+    display: inline-block;
+    margin-right: 10px;
+    color: #74b9ff;
+    font-size: 12px;
+    font-weight: 700;
+    right: 5px;
+    margin-bottom: 20px;
+}
+.time{
+    text-align: end;
+}
+label{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
 }
