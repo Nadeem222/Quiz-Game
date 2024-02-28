@@ -1,3 +1,170 @@
+
+const questionObj = {
+    html:{
+        Q1: {
+            question: "Q1: What is the full form of HTML?",
+            a: "Hello To My Land",
+            b: "Hey Text Markup Language",
+            c: "HyperText Markup Language",
+            d: "Hypertext Markup Language",
+            ans: "ans4"
+        },
+        Q2: {
+            question: "Q2: Which tag is used to define an unordered list in HTML?",
+            a: "<ul>",
+            b: "<ol>",
+            c: "<li>",
+            d: "<list>",
+            ans: "ans1"
+        },
+        Q3: {
+            question: "Q3: What does HTML stand for?",
+            a: "Hyperlink Text Markup Language",
+            b: "Hyper Transfer Markup Language",
+            c: "Hypertext Markup Language",
+            d: "High Text Markup Language",
+            ans: "ans3"
+        },
+        Q4: {
+            question: "Q4: Which tag is used to define a hyperlink in HTML?",
+            a: "<a>",
+            b: "<link>",
+            c: "<href>",
+            d: "<hyper>",
+            ans: "ans1"
+        },
+        Q5: {
+            question: "Q5: What does the HTML element <div> stand for?",
+            a: "Division",
+            b: "Display",
+            c: "Document",
+            d: "Declaration",
+            ans: "ans1"
+        },
+        Q6: {
+            question: "Q6: Which attribute is used to provide additional information about an element in HTML?",
+            a: "class",
+            b: "id",
+            c: "href",
+            d: "src",
+            ans: "ans1"
+        },
+        Q7: {
+            question: "Q7: What is the correct way to comment out multiple lines in HTML?",
+            a: "<!-- This is a comment -->",
+            b: "/* This is a comment */",
+            c: "// This is a comment",
+            d: "<! This is a comment !>",
+            ans: "ans1"
+        },
+        Q8: {
+            question: "Q8: Which of the following is not a semantic HTML element?",
+            a: "<header>",
+            b: "<div>",
+            c: "<nav>",
+            d: "<footer>",
+            ans: "ans2"
+        },
+        Q9: {
+            question: "Q9: What is the purpose of the HTML <meta> tag?",
+            a: "To define metadata about an HTML document",
+            b: "To create a clickable button",
+            c: "To insert a video",
+            d: "To define a navigation menu",
+            ans: "ans1"
+        },
+        Q10: {
+            question: "Q10: Which HTML tag is used to specify an inline frame?",
+            a: "<frame>",
+            b: "<iframe>",
+            c: "<inline>",
+            d: "<frame>",
+            ans: "ans2"
+        },
+        Q11: {
+            question: "Q11: What is the correct HTML for creating a hyperlink?",
+            a: "<a href='http://www.example.com'>Example</a>",
+            b: "<link src='http://www.example.com'>Example</link>",
+            c: "<href='http://www.example.com'>Example</href>",
+            d: "<a src='http://www.example.com'>Example</a>",
+            ans: "ans1"
+        },
+        Q12: {
+            question: "Q12: Which tag is used to define a table row in HTML?",
+            a: "<tr>",
+            b: "<table>",
+            c: "<td>",
+            d: "<th>",
+            ans: "ans1"
+        },
+        Q13: {
+            question: "Q13: What is the correct HTML for inserting an image?",
+            a: "<img src='image.jpg' alt='MyImage'>",
+            b: "<image src='image.jpg' alt='MyImage'>",
+            c: "<img alt='MyImage'>image.jpg</img>",
+            d: "<img='image.jpg' alt='MyImage'>",
+            ans: "ans1"
+        },
+        Q14: {
+            question: "Q14: Which of the following tags represents emphasized text in HTML?",
+            a: "<italic>",
+            b: "<strong>",
+            c: "<em>",
+            d: "<highlight>",
+            ans: "ans3"
+        },
+        Q15: {
+            question: "Q15: Which of the following is an HTML5 semantic element?",
+            a: "<article>",
+            b: "<section>",
+            c: "<division>",
+            d: "<content>",
+            ans: "ans1"
+        },
+        Q16: {
+            question: "Q16: What does the HTML element <br> stand for?",
+            a: "Break",
+            b: "Begin",
+            c: "Bold",
+            d: "Burst",
+            ans: "ans1"
+        },
+        Q17: {
+            question: "Q17: Which HTML attribute specifies an alternate text for an image if the image cannot be displayed?",
+            a: "src",
+            b: "alt",
+            c: "title",
+            d: "href",
+            ans: "ans2"
+        },
+        Q18: {
+            question: "Q18: What is the correct HTML for creating a hyperlink to another webpage?",
+            a: "<a href='http://www.example.com'>Click here</a>",
+            b: "<a src='http://www.example.com'>Click here</a>",
+            c: "<link href='http://www.example.com'>Click here</link>",
+            d: "<link src='http://www.example.com'>Click here</link>",
+            ans: "ans1"
+        },
+        Q19: {
+            question: "Q19: Which HTML tag is used to define a paragraph?",
+            a: "<para>",
+            b: "<p>",
+            c: "<paragraph>",
+            d: "<line>",
+            ans: "ans2"
+        },
+        Q20: {
+            question: "Q20: What is the correct HTML for creating a checkbox?",
+            a: "<input type='checkbox'>",
+            b: "<checkbox>",
+            c: "<check>",
+            d: "<input checkbox>",
+            ans: "ans1"
+        }
+    }
+};
+
+
 const quizDB = [
     {
         question: "Q1: What is the full form of HTML?",
@@ -7,23 +174,26 @@ const quizDB = [
         d: "Hypertext Markup Language",
         ans: "ans4"
     },
-    {
-        question: "Q2: What is the full form of Js?",
-        a: "Java Script",
-        b: "Hey Text Markup Language",
-        c: "HyperText Markup Language",
-        d: "Hypertext Markup Language",
-        ans: "ans1"
-    },
-    {
-        question: "Q3: What is the full form of HTML?",
-        a: "Hello To My Land",
-        b: "Hey Text Markup Language",
-        c: "HyperText Markup Language",
-        d: "Hypertext Markup Language",
-        ans: "ans4"
-    }
 ];
+
+
+const joinButton = document.querySelector('#join');
+
+
+joinButton.addEventListener('click', function() {
+   
+    for( let key in questionObj.html){
+        // console.log(questionObj.html[key])
+        const question = questionObj.html[key]
+
+        quizDB.push(question);
+
+    }
+    
+    // Optionally, you can log the updated quizDB array to see the added questions
+    console.log(quizDB);
+});
+
 
 const question = document.querySelector('.question');
 const option1 = document.querySelector('.option1');
