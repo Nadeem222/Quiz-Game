@@ -28,58 +28,60 @@
             <div class="card">
                 <h3>HTML</h3>
                 <p>20 question</p>
-                <button id="join">Join</button>
+                <button id="html">Join</button>
             </div>
             <div class="card">
                 <h3>CSS</h3>
                 <p>20 question</p>
-                <button>Join</button>
+                <button id="css">Join</button>
             </div>
             <div class="card">
                 <h3>Javascript</h3>
                 <p>20 question</p>
-                <button>Join</button>
+                <button id="javascript">Join</button>
             </div>
             <div class="card">
                 <h3>Generative AI</h3>
                 <p>20 question</p>
-                <button>Join</button>
+                <button id="generativeAi">Join</button>
             </div>
             <div class="card">
                 <h3>Python</h3>
                 <p>20 question</p>
-                <button>Join</button>
+                <button id="python">Join</button>
             </div>
             
         </div>
         
-        <div class="inner-div">
+        <div class="innerDiv">
             <div class="time">
                 <p>Time Left </p><span id="timer"></span>
             </div>
-            <h2 class="question">Question here</h2>
+            <h2 class="question"></h2>
             <ul>
                 <li>
                     <input type="radio" name="answer" id="a" class="answer">
-                    <label for="a" class="option1">Answer option</label>
+                    <label for="a" class="option1"></label>
                 </li>
                 <li>
                     <input type="radio" name="answer" id="b" class="answer">
-                    <label for="b" class="option2">Answer option</label>
+                    <label for="b" class="option2"></label>
                 </li>
                 <li>
                     <input type="radio" name="answer" id="c" class="answer">
-                    <label for="c" class="option3">Answer option</label>
+                    <label for="c" class="option3"></label>
                 </li>
                 <li>
                     <input type="radio" name="answer" id="d" class="answer">
-                    <label for="d" class="option4">Answer option</label>
+                    <label for="d" class="option4"></label>
                 </li>
             </ul>
             <button id="start">Start Quiz</button>
             <button id="next">Next</button>
             <button id="submit" style="display: none;">Submit</button>
-            <div id="showScore" class="scoreArea"></div>
+        </div>
+        <div id="showScore" class="scoreArea">
+            <div class="result"></div>
         </div>
     </div>
     <script src="script.js"></script>

@@ -7,15 +7,15 @@ const questionObj = {
             b: "Hey Text Markup Language",
             c: "HyperText Markup Language",
             d: "Hypertext Markup Language",
-            ans: "ans4"
+            ans: "c"
         },
         Q2: {
             question: "Q2: Which tag is used to define an unordered list in HTML?",
-            a: "<ul>",
-            b: "<ol>",
-            c: "<li>",
-            d: "<list>",
-            ans: "ans1"
+            a: "&lt;ul&gt;",
+            b: "&lt;ol&gt;",
+            c: "&lt;li&gt;",
+            d: "&lt;list&gt;",
+            ans: "a"
         },
         Q3: {
             question: "Q3: What does HTML stand for?",
@@ -23,23 +23,23 @@ const questionObj = {
             b: "Hyper Transfer Markup Language",
             c: "Hypertext Markup Language",
             d: "High Text Markup Language",
-            ans: "ans3"
+            ans: "c"
         },
         Q4: {
             question: "Q4: Which tag is used to define a hyperlink in HTML?",
-            a: "<a>",
-            b: "<link>",
-            c: "<href>",
-            d: "<hyper>",
-            ans: "ans1"
+            a: "&lt;a&gt;",
+            b: "&lt;link&gt;",
+            c: "&lt;href&gt;",
+            d: "&lt;hyper&gt;",
+            ans: "a"
         },
         Q5: {
-            question: "Q5: What does the HTML element <div> stand for?",
+            question: "Q5: What does the HTML element &lt;div&gt; stand for?",
             a: "Division",
             b: "Display",
             c: "Document",
             d: "Declaration",
-            ans: "ans1"
+            ans: "a"
         },
         Q6: {
             question: "Q6: Which attribute is used to provide additional information about an element in HTML?",
@@ -47,87 +47,87 @@ const questionObj = {
             b: "id",
             c: "href",
             d: "src",
-            ans: "ans1"
+            ans: "a"
         },
         Q7: {
             question: "Q7: What is the correct way to comment out multiple lines in HTML?",
-            a: "<!-- This is a comment -->",
+            a: "&lt;!-- This is a comment --&gt;",
             b: "/* This is a comment */",
             c: "// This is a comment",
-            d: "<! This is a comment !>",
-            ans: "ans1"
+            d: "&lt;! This is a comment !&gt;",
+            ans: "a"
         },
         Q8: {
             question: "Q8: Which of the following is not a semantic HTML element?",
-            a: "<header>",
-            b: "<div>",
-            c: "<nav>",
-            d: "<footer>",
-            ans: "ans2"
+            a: "&lt;header&gt;",
+            b: "&lt;div&gt;",
+            c: "&lt;nav&gt;",
+            d: "&lt;footer&gt;",
+            ans: "b"
         },
         Q9: {
-            question: "Q9: What is the purpose of the HTML <meta> tag?",
+            question: "Q9: What is the purpose of the HTML &lt;meta&gt; tag?",
             a: "To define metadata about an HTML document",
             b: "To create a clickable button",
             c: "To insert a video",
             d: "To define a navigation menu",
-            ans: "ans1"
+            ans: "a"
         },
         Q10: {
             question: "Q10: Which HTML tag is used to specify an inline frame?",
-            a: "<frame>",
-            b: "<iframe>",
-            c: "<inline>",
-            d: "<frame>",
-            ans: "ans2"
+            a: "&lt;frame&gt;",
+            b: "&lt;iframe&gt;",
+            c: "&lt;inline&gt;",
+            d: "&lt;frame&gt;",
+            ans: "b"
         },
         Q11: {
             question: "Q11: What is the correct HTML for creating a hyperlink?",
-            a: "<a href='http://www.example.com'>Example</a>",
-            b: "<link src='http://www.example.com'>Example</link>",
-            c: "<href='http://www.example.com'>Example</href>",
-            d: "<a src='http://www.example.com'>Example</a>",
-            ans: "ans1"
+            a: "&lt;a href='http://www.example.com'&gt;Example&lt;/a&gt;",
+            b: "&lt;link src='http://www.example.com'&gt;Example&lt;/link&gt;",
+            c: "&lt;href='http://www.example.com'&gt;Example&lt;/href&gt;",
+            d: "&lt;a src='http://www.example.com'&gt;Example&lt;/a&gt;",
+            ans: "a"
         },
         Q12: {
             question: "Q12: Which tag is used to define a table row in HTML?",
-            a: "<tr>",
-            b: "<table>",
-            c: "<td>",
-            d: "<th>",
-            ans: "ans1"
+            a: "&lt;tr&gt;",
+            b: "&lt;table&gt;",
+            c: "&lt;td&gt;",
+            d: "&lt;th&gt;",
+            ans: "a"
         },
         Q13: {
             question: "Q13: What is the correct HTML for inserting an image?",
-            a: "<img src='image.jpg' alt='MyImage'>",
-            b: "<image src='image.jpg' alt='MyImage'>",
-            c: "<img alt='MyImage'>image.jpg</img>",
-            d: "<img='image.jpg' alt='MyImage'>",
-            ans: "ans1"
+            a: "&lt;img src='image.jpg' alt='MyImage'&gt;",
+            b: "&lt;image src='image.jpg' alt='MyImage'&gt;",
+            c: "&lt;img alt='MyImage'&gt;image.jpg&lt;/img&gt;",
+            d: "&lt;img='image.jpg' alt='MyImage'&gt;",
+            ans: "a"
         },
         Q14: {
             question: "Q14: Which of the following tags represents emphasized text in HTML?",
-            a: "<italic>",
-            b: "<strong>",
-            c: "<em>",
-            d: "<highlight>",
-            ans: "ans3"
+            a: "&lt;italic&gt;",
+            b: "&lt;strong&gt;",
+            c: "&lt;em&gt;",
+            d: "&lt;highlight&gt;",
+            ans: "c"
         },
         Q15: {
             question: "Q15: Which of the following is an HTML5 semantic element?",
-            a: "<article>",
-            b: "<section>",
-            c: "<division>",
-            d: "<content>",
-            ans: "ans1"
+            a: "&lt;article&gt;",
+            b: "&lt;section&gt;",
+            c: "&lt;division&gt;",
+            d: "&lt;content&gt;",
+            ans: "a"
         },
         Q16: {
-            question: "Q16: What does the HTML element <br> stand for?",
+            question: "Q16: What does the HTML element &lt;br&gt; stand for?",
             a: "Break",
             b: "Begin",
             c: "Bold",
             d: "Burst",
-            ans: "ans1"
+            ans: "a"
         },
         Q17: {
             question: "Q17: Which HTML attribute specifies an alternate text for an image if the image cannot be displayed?",
@@ -135,264 +135,365 @@ const questionObj = {
             b: "alt",
             c: "title",
             d: "href",
-            ans: "ans2"
+            ans: "b"
         },
         Q18: {
             question: "Q18: What is the correct HTML for creating a hyperlink to another webpage?",
-            a: "<a href='http://www.example.com'>Click here</a>",
-            b: "<a src='http://www.example.com'>Click here</a>",
-            c: "<link href='http://www.example.com'>Click here</link>",
-            d: "<link src='http://www.example.com'>Click here</link>",
-            ans: "ans1"
+            a: "&lt;a href='http://www.example.com'&gt;Click here&lt;/a&gt;",
+            b: "&lt;a src='http://www.example.com'&gt;Click here&lt;/a&gt;",
+            c: "&lt;link href='http://www.example.com'&gt;Click here&lt;/link&gt;",
+            d: "&lt;link src='http://www.example.com'&gt;Click here&lt;/link&gt;",
+            ans: "a"
         },
         Q19: {
             question: "Q19: Which HTML tag is used to define a paragraph?",
-            a: "<para>",
-            b: "<p>",
-            c: "<paragraph>",
-            d: "<line>",
-            ans: "ans2"
+            a: "&lt;para&gt;",
+            b: "&lt;p&gt;",
+            c: "&lt;paragraph&gt;",
+            d: "&lt;line&gt;",
+            ans: "b"
         },
         Q20: {
             question: "Q20: What is the correct HTML for creating a checkbox?",
-            a: "<input type='checkbox'>",
-            b: "<checkbox>",
-            c: "<check>",
-            d: "<input checkbox>",
+            a: "&lt;input type='checkbox'&gt;",
+            b: "&lt;checkbox&gt;",
+            c: "&lt;check&gt;",
+            d: "&lt;input checkbox&gt;",
+            ans: "a"
+        }
+    },
+    css:{
+        Q1: {
+            question: "Q1: What does CSS stand for?",
+            a: "Cascading Style Sheets",
+            b: "Creative Style Sheets",
+            c: "Computer Style Sheets",
+            d: "Colorful Style Sheets",
+            ans: "ans1"
+        },
+        Q2: {
+            question: "Q2: Which CSS property is used to change the text color of an element?",
+            a: "color",
+            b: "text-color",
+            c: "font-color",
+            d: "foreground-color",
+            ans: "ans1"
+        },
+        Q3: {
+            question: "Q3: Which CSS property is used to change the background color of an element?",
+            a: "bgcolor",
+            b: "background-color",
+            c: "color",
+            d: "background",
+            ans: "ans2"
+        },
+        Q4: {
+            question: "Q4: Which CSS property is used to set the text formatting to italic?",
+            a: "font-style",
+            b: "text-style",
+            c: "italic",
+            d: "font-italic",
+            ans: "ans1"
+        },
+        Q5: {
+            question: "Q5: Which CSS property is used to create rounded corners on an element?",
+            a: "border-radius",
+            b: "rounded-corners",
+            c: "corner-radius",
+            d: "border-style",
+            ans: "ans1"
+        },
+        Q6: {
+            question: "Q6: Which CSS property is used to add shadows to text?",
+            a: "text-shadow",
+            b: "shadow",
+            c: "text-effect",
+            d: "text-styling",
+            ans: "ans1"
+        },
+        Q7: {
+            question: "Q7: Which CSS property is used to change the size of text?",
+            a: "font-size",
+            b: "text-size",
+            c: "size",
+            d: "font-style",
+            ans: "ans1"
+        },
+        Q8: {
+            question: "Q8: Which CSS property is used to set the spacing between lines of text?",
+            a: "line-height",
+            b: "text-spacing",
+            c: "line-spacing",
+            d: "spacing",
+            ans: "ans1"
+        },
+        Q9: {
+            question: "Q9: Which CSS property is used to specify the type of cursor to be displayed when pointing on an element?",
+            a: "mouse-cursor",
+            b: "cursor-type",
+            c: "pointer",
+            d: "cursor",
+            ans: "ans4"
+        },
+        Q10: {
+            question: "Q10: Which CSS property is used to align text horizontally?",
+            a: "text-align",
+            b: "align-text",
+            c: "text-position",
+            d: "horizontal-align",
+            ans: "ans1"
+        },
+        Q11: {
+            question: "Q11: Which CSS property is used to create an underline on text?",
+            a: "text-decoration",
+            b: "underline",
+            c: "text-underline",
+            d: "decorative-text",
+            ans: "ans1"
+        },
+        Q12: {
+            question: "Q12: Which CSS property is used to control the visibility of an element?",
+            a: "visible",
+            b: "display",
+            c: "visibility",
+            d: "show",
+            ans: "ans3"
+        },
+        Q13: {
+            question: "Q13: Which CSS property is used to set the thickness of the border?",
+            a: "border-size",
+            b: "border-width",
+            c: "thickness",
+            d: "border-thickness",
+            ans: "ans2"
+        },
+        Q14: {
+            question: "Q14: Which CSS property is used to set the style of the border?",
+            a: "border-style",
+            b: "style",
+            c: "border",
+            d: "border-styling",
+            ans: "ans1"
+        },
+        Q15: {
+            question: "Q15: Which CSS property is used to control the spacing between individual characters?",
+            a: "letter-spacing",
+            b: "character-spacing",
+            c: "text-spacing",
+            d: "spacing",
+            ans: "ans1"
+        },
+        Q16: {
+            question: "Q16: Which CSS property is used to control the appearance of an element when the user mouses over it?",
+            a: "hover",
+            b: "mouse-over",
+            c: "mouseover",
+            d: "hovering",
+            ans: "ans1"
+        },
+        Q17: {
+            question: "Q17: Which CSS property is used to set the width of an element?",
+            a: "width",
+            b: "element-width",
+            c: "size",
+            d: "width-size",
+            ans: "ans1"
+        },
+        Q18: {
+            question: "Q18: Which CSS property is used to set the height of an element?",
+            a: "height",
+            b: "element-height",
+            c: "size",
+            d: "height-size",
+            ans: "ans1"
+        },
+        Q19: {
+            question: "Q19: Which CSS property is used to specify the space between the borders and the content of an element?",
+            a: "padding",
+            b: "spacing",
+            c: "margin",
+            d: "border-spacing",
+            ans: "ans1"
+        },
+        Q20: {
+            question: "Q20: Which CSS property is used to set the transparency of an element?",
+            a: "transparency",
+            b: "opacity",
+            c: "alpha",
+            d: "transparent",
+            ans: "ans2"
+        }
+    },
+    javascript:{
+        Q1: {
+            question: "Q1: What does JS stand for?",
+            a: "JavaScript",
+            b: "JavaSuper",
+            c: "JustScript",
+            d: "Jupiter",
+            ans: "ans1"
+        },
+        Q2: {
+            question: "Q2: Which of the following is NOT a valid JavaScript variable name?",
+            a: "2myVar",
+            b: "_myVar",
+            c: "$myVar",
+            d: "myVar2",
+            ans: "ans1"
+        },
+        Q3: {
+            question: "Q3: What type of language is JavaScript?",
+            a: "Object-Oriented",
+            b: "Procedural",
+            c: "Functional",
+            d: "All of the above",
+            ans: "ans4"
+        },
+        Q4: {
+            question: "Q4: What keyword is used to declare variables in JavaScript?",
+            a: "var",
+            b: "let",
+            c: "const",
+            d: "variable",
+            ans: "ans1"
+        },
+        Q5: {
+            question: "Q5: Which of the following is NOT a valid way to declare a JavaScript function?",
+            a: "function myFunction() {}",
+            b: "myFunction = function() {}",
+            c: "myFunction() {}",
+            d: "const myFunction = () => {}",
+            ans: "ans3"
+        },
+        Q6: {
+            question: "Q6: Which function is used to print data in the console?",
+            a: "console.print()",
+            b: "console.write()",
+            c: "console.log()",
+            d: "console.display()",
+            ans: "ans3"
+        },
+        Q7: {
+            question: "Q7: What is the result of 5 + '5' in JavaScript?",
+            a: "10",
+            b: "'55'",
+            c: "'10'",
+            d: "Error",
+            ans: "ans2"
+        },
+        Q8: {
+            question: "Q8: What does the `typeof` operator return for a function?",
+            a: "'function'",
+            b: "'object'",
+            c: "'undefined'",
+            d: "'string'",
+            ans: "ans1"
+        },
+        Q9: {
+            question: "Q9: Which of the following is NOT a JavaScript data type?",
+            a: "boolean",
+            b: "integer",
+            c: "symbol",
+            d: "array",
+            ans: "ans2"
+        },
+        Q10: {
+            question: "Q10: Which symbol is used for single-line comments in JavaScript?",
+            a: "//",
+            b: "/*",
+            c: "**",
+            d: "--",
+            ans: "ans1"
+        },
+        Q11: {
+            question: "Q11: Which function is used to parse a string and return an integer?",
+            a: "parseInt()",
+            b: "stringToInt()",
+            c: "toInteger()",
+            d: "strToInt()",
+            ans: "ans1"
+        },
+        Q12: {
+            question: "Q12: What is the JavaScript operator for exponentiation?",
+            a: "^",
+            b: "**",
+            c: "^^",
+            d: "expt()",
+            ans: "ans2"
+        },
+        Q13: {
+            question: "Q13: What will the following code output: console.log(typeof null);?",
+            a: "'null'",
+            b: "'object'",
+            c: "'undefined'",
+            d: "'string'",
+            ans: "ans2"
+        },
+        Q14: {
+            question: "Q14: What is the purpose of the `===` operator in JavaScript?",
+            a: "Checks for equality with type conversion",
+            b: "Checks for equality without type conversion",
+            c: "Assigns a value to a variable",
+            d: "None of the above",
+            ans: "ans2"
+        },
+        Q15: {
+            question: "Q15: What does the `isNaN()` function do in JavaScript?",
+            a: "Returns true if the argument is not a number",
+            b: "Returns true if the argument is a number",
+            c: "Returns true if the argument is null",
+            d: "Returns true if the argument is NaN",
+            ans: "ans1"
+        },
+        Q16: {
+            question: "Q16: Which function is used to add or remove elements from an array?",
+            a: "splice()",
+            b: "slice()",
+            c: "push()",
+            d: "pop()",
+            ans: "ans1"
+        },
+        Q17: {
+            question: "Q17: What does the `map()` function do in JavaScript?",
+            a: "Applies a function to each element in an array and returns a new array",
+            b: "Concatenates two arrays",
+            c: "Returns the first index at which a given element can be found in the array",
+            d: "Checks if all elements in an array pass a test",
+            ans: "ans1"
+        },
+        Q18: {
+            question: "Q18: Which method is used to join two or more arrays?",
+            a: "concat()",
+            b: "join()",
+            c: "merge()",
+            d: "combine()",
+            ans: "ans1"
+        },
+        Q19: {
+            question: "Q19: What does the `this` keyword refer to in JavaScript?",
+            a: "Refers to the current function",
+            b: "Refers to the parent function",
+            c: "Refers to the global object",
+            d: "Refers to the current object",
+            ans: "ans4"
+        },
+        Q20: {
+            question: "Q20: What is the purpose of the `querySelector()` method in JavaScript?",
+            a: "Selects the first element that matches a specified CSS selector",
+            b: "Selects all elements that match a specified CSS selector",
+            c: "Selects the last element that matches a specified CSS selector",
+            d: "Selects elements based on their class names",
             ans: "ans1"
         }
     }
+    
 };
 
 
-const quizDB = [
-    {
-        question: "What is the correct HTML tag for creating a hyperlink?",
-        a: "&lt;a&gt;",
-        b: "&lt;link&gt;",
-        c: "&lt;href&gt;",
-        d: "&lt;url&gt;",
-        ans: "a"
-    },
-<<<<<<< HEAD
-];
+const quizDB = [];
 
 
-const joinButton = document.querySelector('#join');
-
-
-joinButton.addEventListener('click', function() {
-   
-    for( let key in questionObj.html){
-        // console.log(questionObj.html[key])
-        const question = questionObj.html[key]
-
-        quizDB.push(question);
-
-    }
-    
-    // Optionally, you can log the updated quizDB array to see the added questions
-    console.log(quizDB);
-});
-
-
-=======
-    {
-        question: "Which CSS property is used to change the text color of an element?",
-        a: "color",
-        b: "font-color",
-        c: "text-color",
-        d: "foreground-color",
-        ans: "a"
-    },
-    {
-        question: "What does the 'NaN' acronym stand for in JavaScript?",
-        a: "Not a Name",
-        b: "New Assignment",
-        c: "Not a Number",
-        d: "No Argument Needed",
-        ans: "c"
-    },
-    {
-        question: "Which HTML tag is used for creating an unordered list?",
-        a: "&lt;ul&gt;",
-        b: "&lt;li&gt;",
-        c: "&lt;ol&gt;",
-        d: "&lt;dl&gt;",
-        ans: "a"
-    },
-    {
-        question: "What is the purpose of 'console.log()' in JavaScript?",
-        a: "To display a message to the user",
-        b: "To log errors to the console",
-        c: "To print the output to the web page",
-        d: "To log information to the console for debugging",
-        ans: "d"
-    },
-    {
-        question: "Which CSS property is used to set the background color of an element?",
-        a: "background-color",
-        b: "color",
-        c: "text-background",
-        d: "bgcolor",
-        ans: "a"
-    },
-    {
-        question: "What does the 'typeof' operator in JavaScript return for an array?",
-        a: "object",
-        b: "array",
-        c: "type",
-        d: "undefined",
-        ans: "a"
-    },
-    {
-        question: "Which HTML tag is used for creating a table?",
-        a: "&lt;table&gt;",
-        b: "&lt;tab&gt;",
-        c: "&lt;tr&gt;",
-        d: "&lt;td&gt;",
-        ans: "a"
-    },
-    {
-        question: "What is the correct way to comment out multiple lines of CSS?",
-        a: "// This is a comment //",
-        b: "/* This is a comment */",
-        c: "&lt;!-- This is a comment --&gt;",
-        d: "# This is a comment #",
-        ans: "b"
-    },
-    {
-        question: "Which JavaScript keyword is used to declare a variable?",
-        a: "new",
-        b: "declare",
-        c: "var",
-        d: "variable",
-        ans: "c"
-    },
-    {
-        question: "What is the default value of the 'position' property in CSS?",
-        a: "static",
-        b: "relative",
-        c: "fixed",
-        d: "absolute",
-        ans: "a"
-    },
-    {
-        question: "What is the purpose of 'localStorage' in JavaScript?",
-        a: "To store data on the server",
-        b: "To store data in a cookie",
-        c: "To store data on the client's device",
-        d: "To store data in a database",
-        ans: "c"
-    },
-    {
-        question: "Which event in JavaScript is triggered when a form is submitted?",
-        a: "onFormSubmit",
-        b: "onSubmit",
-        c: "onClick",
-        d: "onChange",
-        ans: "b"
-    },
-    {
-        question: "What does the CSS property 'display: none;' do?",
-        a: "Hides the element",
-        b: "Makes the element visible",
-        c: "Resizes the element",
-        d: "Changes the text color",
-        ans: "a"
-    },
-    {
-        question: "Which JavaScript operator is used for strict equality (both value and type)?",
-        a: "==",
-        b: "===",
-        c: "!=",
-        d: "!==",
-        ans: "b"
-    },
-    {
-        question: "In CSS, how do you select all elements with the class 'example'?",
-        a: ".example",
-        b: "#example",
-        c: "element.example",
-        d: "example",
-        ans: "a"
-    },
-    {
-        question: "What is the purpose of the 'addEventListener()' method in JavaScript?",
-        a: "To add an event listener to an element",
-        b: "To remove an event listener from an element",
-        c: "To change the document's title",
-        d: "To add an element to the DOM",
-        ans: "a"
-    },
-    {
-        question: "Which HTML tag is used for creating a line break?",
-        a: "&lt;br&gt;",
-        b: "&lt;lb&gt;",
-        c: "&lt;break&gt;",
-        d: "&lt;newline&gt;",
-        ans: "a"
-    },
-    {
-        question: "What is the purpose of 'this' keyword in JavaScript?",
-        a: "To refer to the current object",
-        b: "To declare a new variable",
-        c: "To create a new function",
-        d: "To define a new class",
-        ans: "a"
-    },
-    {
-        question: "Which CSS property is used to control the space between elements?",
-        a: "margin",
-        b: "padding",
-        c: "border",
-        d: "height",
-        ans: "a"
-    },
-    {
-        question: "What is the correct JavaScript syntax for a 'for' loop?",
-        a: "for (i <= 5)",
-        b: "for (i = 1 to 5)",
-        c: "for (var i = 1; i <= 5; i++)",
-        d: "for i in range(5)",
-        ans: "c"
-    },
-    {
-        question: "Which CSS property is used to change the font size of an element?",
-        a: "font-style",
-        b: "font-family",
-        c: "font-size",
-        d: "font-weight",
-        ans: "c"
-    },
-    {
-        question: "In JavaScript, which method is used to parse JSON data?",
-        a: "parseJSON()",
-        b: "JSON.parse()",
-        c: "fromJSON()",
-        d: "stringifyJSON()",
-        ans: "b"
-    },
-    {
-        question: "Which HTML tag is used for creating a definition list?",
-        a: "&lt;ul&gt;",
-        b: "&lt;li&gt;",
-        c: "&lt;ol&gt;",
-        d: "&lt;dl&gt;",
-        ans: "d"
-    },
-    {
-        question: "What does the 'NaN' acronym stand for in JavaScript?",
-        a: "Not a Name",
-        b: "New Assignment",
-        c: "Not a Number",
-        d: "No Argument Needed",
-        ans: "c"
-    }
-];
-
-
->>>>>>> 02816059b8f0e09c7f58ac38eb1b0457ba7b7e7b
+const joinButtons = document.querySelectorAll('.card button');
 const question = document.querySelector('.question');
 const option1 = document.querySelector('.option1');
 const option2 = document.querySelector('.option2');
@@ -404,6 +505,42 @@ const nextButton = document.querySelector("#next");
 const answers = document.querySelectorAll('.answer');
 const showScore = document.querySelector('#showScore');
 const timerDisplay = document.querySelector('#timer');
+const result = document.getElementsByClassName('result');
+
+
+
+joinButtons.forEach( button => {
+    button.addEventListener('click', () => {
+        document.querySelector('.cardContainer').style.display = "none"
+        document.querySelector('.innerDiv').style.display = 'block'
+
+        quizDB.length = 0;
+        const cardId = event.target.id
+
+        if( cardId === "html"){
+            for(let key in questionObj.html){
+                const question = questionObj.html[key];
+                quizDB.push(question);
+            }
+        }else if(cardId === "css"){
+            for(let key in questionObj.css){
+                const question = questionObj.css[key];
+                quizDB.push(question);
+            }
+        }else if(cardId === "javascript"){
+            for(let key in questionObj.javascript){
+                const question = questionObj.javascript[key];
+                quizDB.push(question);
+            }
+        }
+
+        console.log(quizDB)
+    })
+})
+
+
+
+
 
 
 let questionCount = -1;
@@ -444,6 +581,7 @@ submitButton.style.display = 'none';
 
 // Load Question function 
 const loadQuestion = () => {
+    console.log(quizDB)
     questionCount++;
     if (questionCount < quizDB.length) {
         const questionList = quizDB[questionCount];
@@ -468,9 +606,10 @@ startButton.addEventListener('click', () => {
 // Next button click event
 nextButton.addEventListener('click', () => {
     const checkedAnswer = getCheckedAnswer();
-
+console.log(checkedAnswer)
     if (checkedAnswer !== undefined) {
         const correctAnswer = quizDB[questionCount].ans;
+        console.log(correctAnswer)
         if (checkedAnswer === correctAnswer) {
             score++;
         }
@@ -491,21 +630,22 @@ submitButton.addEventListener('click', () => {
 
 // Function to end the quiz
 function endQuiz() {
-    question.style.display = 'none';
-    option1.style.display = 'none';
-    option2.style.display = 'none';
-    option3.style.display = 'none';
-    option4.style.display = 'none';
-    nextButton.style.display = 'none';
-    submitButton.style.display = 'none';
-
+    document.querySelector('.innerDiv').style.display = 'none'
+    let finalScore = (score / quizDB.length) * 100;
+    let borderWidth =`${finalScore}%`
     showScore.innerHTML = `
-        <h3>Your Score: ${score}/${quizDB.length}</h3>
+        <h3>${finalScore}%</h3>
+        
         <button class="btn" onclick="location.reload()">Play Again</button>
     `;
+    showScore.style.borderStyle = 'solid';
+    showScore.style.borderWidth = borderWidth;
+    showScore.style.border = 'none';
     showScore.classList.remove('scoreArea');
     showScore.style.display = 'block';
 }
+
+
 
 // Checked answer function
 const getCheckedAnswer = () => {
@@ -513,11 +653,17 @@ const getCheckedAnswer = () => {
     answers.forEach(curAnsElem => {
         if (curAnsElem.checked) {
             answer = curAnsElem.id;
+            curAnsElem.parentNode.style.backgroundColor = "#ECEFF7"
+        }else{
+            curAnsElem.parentNode.style.backgroundColor = "";
         }
     });
     return answer;
 };
 
+answers.forEach(curAnsElem => {
+    curAnsElem.addEventListener('click', getCheckedAnswer);
+});
 // Deselect all answers
 const deselectAll = () => {
     answers.forEach((curAnsElem) => curAnsElem.checked = false);
