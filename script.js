@@ -506,6 +506,8 @@ const answers = document.querySelectorAll('.answer');
 const showScore = document.querySelector('#showScore');
 const timerDisplay = document.querySelector('#timer');
 const result = document.getElementsByClassName('result');
+const main = document.querySelector('.main');
+const logo = document.querySelector('.logo');
 
 
 
@@ -577,7 +579,10 @@ function formatTime(seconds) {
 nextButton.style.display = 'none';
 submitButton.style.display = 'none';
 
+logo.addEventListener('click' , () => {
+    location.reload()
 
+})
 
 // Load Question function 
 const loadQuestion = () => {
@@ -632,17 +637,19 @@ submitButton.addEventListener('click', () => {
 function endQuiz() {
     document.querySelector('.innerDiv').style.display = 'none'
     let finalScore = (score / quizDB.length) * 100;
-    let borderWidth =`${finalScore}%`
+
+    if(finalScore < "60"){
+        showScore.style.border = "10px double red";
+        showScore.style.color = "red"
+    }
     showScore.innerHTML = `
-        <h3>${finalScore}%</h3>
-        
-        <button class="btn" onclick="location.reload()">Play Again</button>
+        <h3>${finalScore} <span>%</span></h3>     
     `;
-    showScore.style.borderStyle = 'solid';
-    showScore.style.borderWidth = borderWidth;
-    showScore.style.border = 'none';
     showScore.classList.remove('scoreArea');
-    showScore.style.display = 'block';
+    main.style.display = "flex"
+    main.style.justifyContent = "center";
+    main.style.alignItems = "center"
+    showScore.style.display = 'flex';
 }
 
 
@@ -668,3 +675,4 @@ answers.forEach(curAnsElem => {
 const deselectAll = () => {
     answers.forEach((curAnsElem) => curAnsElem.checked = false);
 };
+{/* <button class="btn" onclick="location.reload()">Play Again</button> */}
