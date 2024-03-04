@@ -509,8 +509,42 @@ const result = document.getElementsByClassName('result');
 const main = document.querySelector('.main');
 const logo = document.querySelector('.logo');
 
+document.getElementById("loginButton").addEventListener("click", function() {
+    document.getElementById("landingPage").style.display = "none";
+    document.getElementById("loginForm").style.display = "block";
+});
 
+// Function to show sign-up form
+document.getElementById("signupButton").addEventListener("click", function() {
+    document.getElementById("landingPage").style.display = "none";
+    document.getElementById("signupForm").style.display = "block";
+});
 
+// Function to handle login
+document.getElementById("loginSubmit").addEventListener("click", function() {
+    const username = document.getElementById("loginUsername").value;
+    const password = document.getElementById("loginPassword").value;
+    // Verify credentials (You can replace this with your own logic)
+    const storedUsername = localStorage.getItem("username");
+    const storedPassword = localStorage.getItem("password");
+    if (username === storedUsername && password === storedPassword) {
+        document.getElementById("loginForm").style.display = "none";
+        document.getElementById("websiteUI").style.display = "block";
+    } else {
+        alert("Invalid username or password!");
+    }
+});
+
+// Function to handle sign-up
+document.getElementById("signupSubmit").addEventListener("click", function() {
+    const username = document.getElementById("signupUsername").value;
+    const password = document.getElementById("signupPassword").value;
+    // Store user data in local storage (You can replace this with your own logic)
+    localStorage.setItem("username", username);
+    localStorage.setItem("password", password);
+    document.getElementById("signupForm").style.display = "none";
+    document.getElementById("websiteUI").style.display = "block";
+});
 joinButtons.forEach( button => {
     button.addEventListener('click', () => {
         document.querySelector('.cardContainer').style.display = "none"
@@ -535,8 +569,9 @@ joinButtons.forEach( button => {
                 quizDB.push(question);
             }
         }
-
-        console.log(quizDB)
+        loadQuestion();
+    startTimer();
+        // console.log(quizDB)
     })
 })
 
@@ -586,7 +621,7 @@ logo.addEventListener('click' , () => {
 
 // Load Question function 
 const loadQuestion = () => {
-    console.log(quizDB)
+    // console.log(quizDB)
     questionCount++;
     if (questionCount < quizDB.length) {
         const questionList = quizDB[questionCount];
@@ -606,15 +641,16 @@ startButton.addEventListener('click', () => {
     nextButton.style.display = 'block';
     loadQuestion();
     startTimer();
+    deselectAll();
 });
 
 // Next button click event
 nextButton.addEventListener('click', () => {
     const checkedAnswer = getCheckedAnswer();
-console.log(checkedAnswer)
+// console.log(checkedAnswer)
     if (checkedAnswer !== undefined) {
         const correctAnswer = quizDB[questionCount].ans;
-        console.log(correctAnswer)
+        // console.log(correctAnswer)
         if (checkedAnswer === correctAnswer) {
             score++;
         }

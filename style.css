@@ -22,6 +22,59 @@ html{
     font-size: 25px;
     font-family: "Josefin Sans", sans-serif;
 }
+#landingPage {
+    text-align: center;
+    margin-top: 100px;
+}
+
+#landingPage h1 {
+    color: #333;
+}
+
+#landingPage p {
+    color: #666;
+}
+
+#landingPage button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#loginForm, #signupForm {
+    text-align: center;
+    display: none;
+    margin-top: 20px;
+}
+
+#loginForm h2, #signupForm h2 {
+    color: #333;
+}
+
+#loginForm input, #signupForm input {
+    width: 200px;
+    height: 30px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#loginForm button, #signupForm button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
 nav{
     font-family: "Josefin Sans", sans-serif;
     font-weight: 600;
