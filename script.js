@@ -509,16 +509,20 @@ const result = document.getElementsByClassName('result');
 const main = document.querySelector('.main');
 const logo = document.querySelector('.logo');
 
-document.getElementById("loginButton").addEventListener("click", function() {
+document.getElementById("entrance").addEventListener("click", function() {
     document.getElementById("landingPage").style.display = "none";
-    document.getElementById("loginForm").style.display = "block";
+    document.getElementById("loginForm").style.display = "flex";
+});
+document.getElementById("signUpBtn").addEventListener('click' , function(){
+    document.getElementById("loginCard").style.display = "none"
+    document.getElementById("signupCard").style.display = "flex"
+});
+document.getElementById("loginBtn").addEventListener('click' , function(){
+    document.getElementById("loginCard").style.display = "flex"
+    document.getElementById("signupCard").style.display = "none"
 });
 
-// Function to show sign-up form
-document.getElementById("signupButton").addEventListener("click", function() {
-    document.getElementById("landingPage").style.display = "none";
-    document.getElementById("signupForm").style.display = "block";
-});
+
 
 // Function to handle login
 document.getElementById("loginSubmit").addEventListener("click", function() {
@@ -528,8 +532,10 @@ document.getElementById("loginSubmit").addEventListener("click", function() {
     const storedUsername = localStorage.getItem("username");
     const storedPassword = localStorage.getItem("password");
     if (username === storedUsername && password === storedPassword) {
-        document.getElementById("loginForm").style.display = "none";
+        document.getElementById("loginCon").style.display = "none";
         document.getElementById("websiteUI").style.display = "block";
+        document.getElementById("profile").style.display = "flex";
+        document.getElementById('profileName').textContent = ` ${username} `
     } else {
         alert("Invalid username or password!");
     }
@@ -539,11 +545,27 @@ document.getElementById("loginSubmit").addEventListener("click", function() {
 document.getElementById("signupSubmit").addEventListener("click", function() {
     const username = document.getElementById("signupUsername").value;
     const password = document.getElementById("signupPassword").value;
-    // Store user data in local storage (You can replace this with your own logic)
-    localStorage.setItem("username", username);
-    localStorage.setItem("password", password);
-    document.getElementById("signupForm").style.display = "none";
-    document.getElementById("websiteUI").style.display = "block";
+    const email = document.getElementById("signupEmail").value;
+    
+    const storedUsername = localStorage.getItem("username");
+    const storedEmail = localStorage.getItem("email");
+    
+    if(storedUsername === username && storedEmail === email){
+        alert(`User ALready Exist`)
+    }else{
+        
+        // Store user data in local storage (You can replace this with your own logic)
+        localStorage.setItem("username", username);
+        localStorage.setItem("password", password);
+        localStorage.setItem("email", email);
+
+
+        document.getElementById("loginCon").style.display = "none";
+        document.getElementById("websiteUI").style.display = "block";
+        document.getElementById("profile").style.display = "flex";
+        document.getElementById('profileName').textContent = ` ${username} `
+        console.log(username)
+    }
 });
 joinButtons.forEach( button => {
     button.addEventListener('click', () => {
@@ -615,7 +637,7 @@ nextButton.style.display = 'none';
 submitButton.style.display = 'none';
 
 logo.addEventListener('click' , () => {
-    location.reload()
+    document.getElementById('websiteUI').scrollIntoView();
 
 })
 

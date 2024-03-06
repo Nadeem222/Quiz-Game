@@ -11,122 +11,160 @@
 </head>
 
 <body>
-    <div id="landingPage">
-        <h1>Welcome to My Website</h1>
-        <p>Please login or sign up to continue:</p>
-        <button id="loginButton">Login</button>
-        <button id="signupButton">Sign Up</button>
-    </div>
+    <div class="container">
 
-    <!-- Login and sign-up forms -->
-    <div id="loginForm" style="display: none;">
-        <h2>Login</h2>
-        <input type="text" id="loginUsername" placeholder="Username" required>
-        <input type="password" id="loginPassword" placeholder="Password" required>
-        <button id="loginSubmit">Login</button>
-    </div>
-
-    <div id="signupForm" style="display: none;">
-        <h2>Sign Up</h2>
-        <input type="text" id="signupUsername" placeholder="Username" required>
-        <input type="password" id="signupPassword" placeholder="Password" required>
-        <button id="signupSubmit">Sign Up</button>
-    </div>
-    <div id="websiteUI" style="display: none;">
-       
         <nav>
             <div class="navBar">
     
                 <div class="logo">
                     <a href="#"><img src="./logo.png" alt="Logo"></a>
                 </div>
-                <div class="profile">
+                <div class="profile" id="profile">
                     <a href="#"><img src="./profile.jpg" alt="Profile img"></a>
-                    <p>S Nadeem ALi <span><i class="fa-solid fa-chevron-down"></i></span></p>
+                    <p ><span id="profileName"></span> <span><i class="fa-solid fa-chevron-down"></i></span></p>
                 </div>
             </div>
         </nav>
-        <div class="main">
-            <div class="login-signup-forms">
-                <form id="loginForm">
-                    <!-- Login form HTML -->
-                    <input type="text" id="loginUsername" placeholder="Username" required>
-                    <input type="password" id="loginPassword" placeholder="Password" required>
-                    <button type="submit">Login</button>
-                </form>
-        
-                <form id="signupForm">
-                    <!-- Sign-up form HTML -->
-                    <input type="text" id="signupUsername" placeholder="Username" required>
-                    <input type="password" id="signupPassword" placeholder="Password" required>
-                    <button type="submit">Sign Up</button>
-                </form>
-            </div>
-            <div class="cardContainer">
-                <div class="card">
-                    <h3>HTML</h3>
-                    <p>20 question</p>
-                    <button id="html">Join</button>
-                </div>
-                <div class="card">
-                    <h3>CSS</h3>
-                    <p>20 question</p>
-                    <button id="css">Join</button>
-                </div>
-                <div class="card">
-                    <h3>Javascript</h3>
-                    <p>20 question</p>
-                    <button id="javascript">Join</button>
-                </div>
-                <div class="card">
-                    <h3>Generative AI</h3>
-                    <p>20 question</p>
-                    <button id="generativeAi">Join</button>
-                </div>
-                <div class="card">
-                    <h3>Python</h3>
-                    <p>20 question</p>
-                    <button id="python">Join</button>
-                </div>
-                <div class="card">
-                    <h3>Web & Mobile </h3>
-                    <p>20 question</p>
-                    <button id="Web & Mobile">Join</button>
-                </div>
-                
-            </div>
-            
-            <div class="innerDiv">
-                <div class="time">
-                    <p>Time Left </p><span id="timer"></span>
-                </div>
-                <h2 class="question"></h2>
-                <ul>
-                    <li>
-                        <input type="radio" name="answer" id="a" class="answer">
-                        <label for="a" class="option1"></label>
-                    </li>
-                    <li>
-                        <input type="radio" name="answer" id="b" class="answer">
-                        <label for="b" class="option2"></label>
-                    </li>
-                    <li>
-                        <input type="radio" name="answer" id="c" class="answer">
-                        <label for="c" class="option3"></label>
-                    </li>
-                    <li>
-                        <input type="radio" name="answer" id="d" class="answer">
-                        <label for="d" class="option4"></label>
-                    </li>
-                </ul>
-                <button id="start">Start Quiz</button>
-                <button id="next">Next</button>
-                <button id="submit" style="display: none;">Submit</button>
-            </div>
-            <div id="showScore" class="scoreArea">
-                
+        <div id="landingPage">
+            <p class="heading">Quiz Application</p>
+            <p>Code Tech IT Training Program</p>
+            <p>Code Tech It Training program is an institute that delivers the latest IT education.(PAISA LEKE)</p>
+            <div>
+                <p class="startText">Start your exam here:</p>
+    
+                <button class="continue-application" id="entrance">
+                    <div>
+                        <div class="pencil"></div>
+                        <div class="folder">
+                            <div class="top">
+                                <svg viewBox="0 0 24 27">
+                                    <path d="M1,0 L23,0 C23.5522847,-1.01453063e-16 24,0.44771525 24,1 L24,8.17157288 C24,8.70200585 23.7892863,9.21071368 23.4142136,9.58578644 L20.5857864,12.4142136 C20.2107137,12.7892863 20,13.2979941 20,13.8284271 L20,26 C20,26.5522847 19.5522847,27 19,27 L1,27 C0.44771525,27 6.76353751e-17,26.5522847 0,26 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 Z"></path>
+                                </svg>
+                            </div>
+                            <div class="paper"></div>
+                        </div>
+                    </div>
+                    Continue Application
+                </button>
             </div>
         </div>
+    
+        <!-- Login and sign-up forms -->
+        <div class="loginCon" id="loginCon">
+             <div id="loginForm" style="display: none;">
+    
+                <div class="left">
+                    <img src="./im.png" alt="">
+                </div>
+                <div class="right" id="loginCard">
+                    
+                    <p>Hello! Welcome To <span>Code Tech</span></p>
+                    <p>Login Your Account</p>
+                    <div class="user">
+                        <span><i class="fa-solid fa-user"></i></span>
+                        <input type="text" id="loginUsername" placeholder="Username" name="loginUsername" required>
+                    </div>
+                    <div class="user">
+                        <span><i class="fa-solid fa-lock"></i></span>
+                        <input type="password" id="loginPassword" placeholder="Password" required name="loginPassword">
+                    </div>
+                    <button id="loginSubmit">Login</button>
+                    <small id="signUpBtn">or Create Account</small>
+                </div>
+                <div id="signupCard" style="display: none;" class="right">
+                    <p>Hello! Welcome To <span>Code Tech</span></p>
+                        <p>Create Account</p>
+                        <div class="user">
+                            <span><i class="fa-solid fa-user"></i></span>
+                            <input type="text" id="signupUsername" placeholder="Username" name="loginUsername" required>
+                        </div>
+                        <div class="user">
+                            <span><i class="fa-solid fa-lock"></i></span>
+                            <input type="password" id="signupPassword" placeholder="Password" required name="loginPassword">
+                        </div>
+                        <div class="user">
+                            <span><i class="fa-solid fa-envelope"></i></span>
+                            <input type="email" id="signupEmail" placeholder="Email" required >
+                        </div>
+                        <button id="signupSubmit">Sign Up</button>
+                        <small id="loginBtn">Already a Member</small>
+                </div>
+            </div>
+        </div>
+    
+        <div id="websiteUI" style="display: none;">
+           
+            
+            <div class="main">
+                <div class="cardContainer">
+                    <div class="card">
+                        <h3>HTML</h3>
+                        <p>20 question</p>
+                        <button id="html">Join</button>
+                    </div>
+                    <div class="card">
+                        <h3>CSS</h3>
+                        <p>20 question</p>
+                        <button id="css">Join</button>
+                    </div>
+                    <div class="card">
+                        <h3>Javascript</h3>
+                        <p>20 question</p>
+                        <button id="javascript">Join</button>
+                    </div>
+                    <div class="card">
+                        <h3>Generative AI</h3>
+                        <p>20 question</p>
+                        <button id="generativeAi">Join</button>
+                    </div>
+                    <div class="card">
+                        <h3>Python</h3>
+                        <p>20 question</p>
+                        <button id="python">Join</button>
+                    </div>
+                    <div class="card">
+                        <h3>Web & Mobile </h3>
+                        <p>20 question</p>
+                        <button id="Web & Mobile">Join</button>
+                    </div>
+                    
+                </div>
+                
+                <div class="innerDiv">
+                    <div class="time">
+                        <p>Time Left </p><span id="timer"></span>
+                    </div>
+                    <h2 class="question"></h2>
+                    <ul>
+                        <li>
+                            <input type="radio" name="answer" id="a" class="answer">
+                            <label for="a" class="option1"></label>
+                        </li>
+                        <li>
+                            <input type="radio" name="answer" id="b" class="answer">
+                            <label for="b" class="option2"></label>
+                        </li>
+                        <li>
+                            <input type="radio" name="answer" id="c" class="answer">
+                            <label for="c" class="option3"></label>
+                        </li>
+                        <li>
+                            <input type="radio" name="answer" id="d" class="answer">
+                            <label for="d" class="option4"></label>
+                        </li>
+                    </ul>
+                    <button id="start">Start Quiz</button>
+                    <button id="next">Next</button>
+                    <button id="submit" style="display: none;">Submit</button>
+                </div>
+                <div id="showScore" class="scoreArea">
+                    
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>Developed By <span>Nadeem Hakeem</span></p>
+        </footer>
     </div>
     <script src="script.js"></script>
 </body>
