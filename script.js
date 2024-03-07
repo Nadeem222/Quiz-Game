@@ -512,6 +512,7 @@ const logo = document.querySelector('.logo');
 document.getElementById("entrance").addEventListener("click", function() {
     document.getElementById("landingPage").style.display = "none";
     document.getElementById("loginForm").style.display = "flex";
+    document.getElementById("loginCon").style.display = "flex";
 });
 document.getElementById("signUpBtn").addEventListener('click' , function(){
     document.getElementById("loginCard").style.display = "none"
@@ -537,7 +538,7 @@ document.getElementById("loginSubmit").addEventListener("click", function() {
         document.getElementById("profile").style.display = "flex";
         document.getElementById('profileName').textContent = ` ${username} `
     } else {
-        alert("Invalid username or password!");
+        swal("Invalid username or password!");
     }
 });
 
@@ -547,24 +548,34 @@ document.getElementById("signupSubmit").addEventListener("click", function() {
     const password = document.getElementById("signupPassword").value;
     const email = document.getElementById("signupEmail").value;
     
-    const storedUsername = localStorage.getItem("username");
-    const storedEmail = localStorage.getItem("email");
-    
-    if(storedUsername === username && storedEmail === email){
-        alert(`User ALready Exist`)
+    if (username === ""){
+        swal("Must be Enter User name.","", "error");
+
+    }else if(password === ""){
+        swal("Must be Enter Password.","", "error");
+    }else if(email === ""){
+        swal("Mjst be Enter Email.","", "error");
     }else{
+
+        const storedUsername = localStorage.getItem("username");
+        const storedEmail = localStorage.getItem("email");
         
-        // Store user data in local storage (You can replace this with your own logic)
-        localStorage.setItem("username", username);
-        localStorage.setItem("password", password);
-        localStorage.setItem("email", email);
-
-
-        document.getElementById("loginCon").style.display = "none";
-        document.getElementById("websiteUI").style.display = "block";
-        document.getElementById("profile").style.display = "flex";
-        document.getElementById('profileName').textContent = ` ${username} `
-        console.log(username)
+        if(storedUsername === username && storedEmail === email){
+            alert(`User ALready Exist`)
+        }else{
+            
+            // Store user data in local storage (You can replace this with your own logic)
+            localStorage.setItem("username", username);
+            localStorage.setItem("password", password);
+            localStorage.setItem("email", email);
+    
+    
+            document.getElementById("loginCon").style.display = "none";
+            document.getElementById("websiteUI").style.display = "block";
+            document.getElementById("profile").style.display = "flex";
+            document.getElementById('profileName').textContent = ` ${username} `
+            console.log(username)
+        }
     }
 });
 joinButtons.forEach( button => {
@@ -598,8 +609,7 @@ joinButtons.forEach( button => {
 })
 
 
-
-
+// localStorage.clear()
 
 
 let questionCount = -1;
@@ -636,6 +646,7 @@ function formatTime(seconds) {
 nextButton.style.display = 'none';
 submitButton.style.display = 'none';
 
+// 
 logo.addEventListener('click' , () => {
     document.getElementById('websiteUI').scrollIntoView();
 

@@ -35,7 +35,7 @@ html{
     justify-content: space-around;
 }
 .loginCon{
-    display: flex;
+    display: none;
     width: 100%;
     background-color: #c1e6ff;
     background-image: linear-gradient(297deg, #c1e6ff 46%, #ffffff 100%);
@@ -60,7 +60,6 @@ html{
     font-weight: 700 !important;
 
 }
-
 #landingPage button {
     color: #fff;
     border: none;
