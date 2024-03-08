@@ -749,6 +749,7 @@ function endQuiz() {
     main.style.justifyContent = "center";
     main.style.alignItems = "center"
     showScore.style.display = 'flex';
+    document.querySelector('.welcomeText').style.display = "none"
 }
 
 
