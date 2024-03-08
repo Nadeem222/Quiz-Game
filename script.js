@@ -529,16 +529,18 @@ document.getElementById("loginBtn").addEventListener('click' , function(){
 document.getElementById("loginSubmit").addEventListener("click", function() {
     const username = document.getElementById("loginUsername").value;
     const password = document.getElementById("loginPassword").value;
-    // Verify credentials (You can replace this with your own logic)
+
     const storedUsername = localStorage.getItem("username");
     const storedPassword = localStorage.getItem("password");
     if (username === storedUsername && password === storedPassword) {
+        swal("Welcome!","Succesfully Login", "success");
         document.getElementById("loginCon").style.display = "none";
         document.getElementById("websiteUI").style.display = "block";
         document.getElementById("profile").style.display = "flex";
         document.getElementById('profileName').textContent = ` ${username} `
+        document.getElementById('welcomeHeading').textContent = ` Hi! ${username} 👋 `
     } else {
-        swal("Invalid username or password!");
+        swal("Oh No!","Invalid User Name Or Password", "error");
     }
 });
 
@@ -549,14 +551,14 @@ document.getElementById("signupSubmit").addEventListener("click", function() {
     const email = document.getElementById("signupEmail").value;
     
     if (username === ""){
-        swal("Must be Enter User name.","", "error");
-
+        swal("Must be Enter User name.","", "info");
+        
     }else if(password === ""){
-        swal("Must be Enter Password.","", "error");
+        swal("Must be Enter Password.","", "info");
     }else if(email === ""){
-        swal("Mjst be Enter Email.","", "error");
+        swal("Must be Enter Email.","", "info");
     }else{
-
+        
         const storedUsername = localStorage.getItem("username");
         const storedEmail = localStorage.getItem("email");
         
@@ -564,20 +566,48 @@ document.getElementById("signupSubmit").addEventListener("click", function() {
             alert(`User ALready Exist`)
         }else{
             
-            // Store user data in local storage (You can replace this with your own logic)
+           
             localStorage.setItem("username", username);
             localStorage.setItem("password", password);
             localStorage.setItem("email", email);
-    
+            
+            swal("Welcome!","Succesfully Sig Up", "success");
     
             document.getElementById("loginCon").style.display = "none";
             document.getElementById("websiteUI").style.display = "block";
             document.getElementById("profile").style.display = "flex";
             document.getElementById('profileName').textContent = ` ${username} `
+            document.getElementById('welcomeHeading').textContent = ` Hi! ${username} 👋 `
             console.log(username)
         }
     }
 });
+document.getElementById("logoutButton").addEventListener("click", function() {
+  
+    
+    
+    document.getElementById("loginCon").style.display = "block";
+    document.getElementById("websiteUI").style.display = "none";
+    document.getElementById("profile").style.display = "none";
+    document.getElementById('popupContent').style.display = "none"
+    
+   
+    document.getElementById("loginUsername").value = "";
+    document.getElementById("loginPassword").value = "";
+    
+    swal("Logged Out!", "You have been logged out successfully.", "info");
+});
+
+document.getElementById('profileArrow').addEventListener('click' , function(){
+   let popupContent = document.getElementById('popupContent');
+
+   if(popupContent.style.display === "block"){
+    popupContent.style.display = "none"
+   }else{
+    popupContent.style.display = "block"
+   }
+});
+
 joinButtons.forEach( button => {
     button.addEventListener('click', () => {
         document.querySelector('.cardContainer').style.display = "none"
