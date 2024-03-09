@@ -687,4 +687,12 @@ input[type="radio"]{
     .innerDiv h2 , .innerDiv li{
       font-size: 18px;
     }
+    #loginForm input, #signupCard input , #loginForm button , #signupCard button{
+      width: 250px;
+      margin: 0 auto;
+      margin-bottom: 5px;
+    }
+    .user span{
+      left: 85px;
+    }
 }
