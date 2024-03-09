@@ -508,6 +508,14 @@ const timerDisplay = document.querySelector('#timer');
 const result = document.getElementsByClassName('result');
 const main = document.querySelector('.main');
 const logo = document.querySelector('.logo');
+const scoreResult = document.getElementById("scorePercentage");
+
+let questionCount = -1;
+let score = 0;
+
+let timeLeft = 1500; // Time in seconds
+
+let timerInterval;
 
 document.getElementById("entrance").addEventListener("click", function() {
     document.getElementById("landingPage").style.display = "none";
@@ -527,8 +535,11 @@ document.getElementById("loginBtn").addEventListener('click' , function(){
 
 // Function to handle login
 document.getElementById("loginSubmit").addEventListener("click", function() {
-    const username = document.getElementById("loginUsername").value;
-    const password = document.getElementById("loginPassword").value;
+    const usernameInput = document.getElementById("loginUsername");
+    const passwordInput = document.getElementById("loginPassword");
+
+    const username = usernameInput.value;
+    const password = passwordInput.value;
 
     const storedUsername = localStorage.getItem("username");
     const storedPassword = localStorage.getItem("password");
@@ -537,8 +548,14 @@ document.getElementById("loginSubmit").addEventListener("click", function() {
         document.getElementById("loginCon").style.display = "none";
         document.getElementById("websiteUI").style.display = "block";
         document.getElementById("profile").style.display = "flex";
+        document.querySelector('.welcomeText').style.display = "block";
+        document.querySelector('.cardContainer').style.display = 'flex';
         document.getElementById('profileName').textContent = ` ${username} `
         document.getElementById('welcomeHeading').textContent = ` Hi! ${username} 👋 `
+
+        usernameInput.value = "";
+        passwordInput.value = "";
+
     } else {
         swal("Oh No!","Invalid User Name Or Password", "error");
     }
@@ -546,9 +563,16 @@ document.getElementById("loginSubmit").addEventListener("click", function() {
 
 // Function to handle sign-up
 document.getElementById("signupSubmit").addEventListener("click", function() {
-    const username = document.getElementById("signupUsername").value;
-    const password = document.getElementById("signupPassword").value;
-    const email = document.getElementById("signupEmail").value;
+    const usernameInput = document.getElementById('signupUsername');
+    const passwordInput = document.getElementById('signupPassword');
+    const emailInput = document.getElementById("signupEmail");
+
+    const username = usernameInput.value;
+    const password = passwordInput.value;
+    const email =    emailInput.value;
+
+
+    document.querySelector('.welcomeText').style.display = "block"
     
     if (username === ""){
         swal("Must be Enter User name.","", "info");
@@ -576,26 +600,47 @@ document.getElementById("signupSubmit").addEventListener("click", function() {
             document.getElementById("loginCon").style.display = "none";
             document.getElementById("websiteUI").style.display = "block";
             document.getElementById("profile").style.display = "flex";
+            document.querySelector('.cardContainer').style.display = 'flex';
+
             document.getElementById('profileName').textContent = ` ${username} `
             document.getElementById('welcomeHeading').textContent = ` Hi! ${username} 👋 `
-            console.log(username)
+
+            usernameInput.value = "";
+            passwordInput.value = "";
+            emailInput.value = "";
         }
     }
 });
-document.getElementById("logoutButton").addEventListener("click", function() {
-  
-    
-    
-    document.getElementById("loginCon").style.display = "block";
+
+
+
+function resetQuizState() {
+    questionCount = -1;
+    score = 0;
+    clearInterval(timerInterval);
+    timeLeft = 1500; // Reset time
+    timerDisplay.textContent = formatTime(timeLeft);
+    showScore.style.display = "none";
+    startButton.style.display = "block";
+    nextButton.style.display = "none";
+    submitButton.style.display = "none";
+    document.querySelector('.innerDiv').style.display = 'none';
+    document.querySelector('.cardContainer').style.display = 'none';
+    document.getElementById("loginCon").style.display = "flex";
     document.getElementById("websiteUI").style.display = "none";
-    document.getElementById("profile").style.display = "none";
-    document.getElementById('popupContent').style.display = "none"
-    
-   
-    document.getElementById("loginUsername").value = "";
-    document.getElementById("loginPassword").value = "";
-    
-    swal("Logged Out!", "You have been logged out successfully.", "info");
+
+
+}
+document.getElementById("logoutButton").addEventListener("click", function() {
+    let popupContent = document.getElementById('popupContent');
+
+   if(popupContent.style.display === "block"){
+    popupContent.style.display = "none"
+   }else{
+    popupContent.style.display = "block"
+   }
+    resetQuizState()
+    swal("Logged Out!", "You have been logged out successfully.", "info");  
 });
 
 document.getElementById('profileArrow').addEventListener('click' , function(){
@@ -611,6 +656,7 @@ document.getElementById('profileArrow').addEventListener('click' , function(){
 joinButtons.forEach( button => {
     button.addEventListener('click', () => {
         document.querySelector('.cardContainer').style.display = "none"
+        showScore.style.display = 'none';
         document.querySelector('.innerDiv').style.display = 'block'
 
         quizDB.length = 0;
@@ -642,12 +688,7 @@ joinButtons.forEach( button => {
 // localStorage.clear()
 
 
-let questionCount = -1;
-let score = 0;
 
-let timeLeft = 1500; // Time in seconds
-
-let timerInterval;
 
 function startTimer() {
     timerDisplay.textContent = formatTime(timeLeft);
@@ -738,16 +779,21 @@ function endQuiz() {
     let finalScore = (score / quizDB.length) * 100;
 
     if(finalScore < "60"){
-        showScore.style.border = "10px double red";
-        showScore.style.color = "red"
+        showScore.innerHTML = `
+            <p>You Are Failed! &#128542;</p>
+            <p>Need More Practice </p>
+            <h3 id="scorePercentage">${finalScore} <span>%</span></h3>     
+        `;
+        showScore.querySelector("h3").style.borderColor = "red"
+        showScore.querySelector("h3").style.color = "red"
+    }else{
+        showScore.innerHTML = `
+            <p>Congrat's! &#128522;</p>
+            <p>You are Passed </p>
+            <h3>${finalScore} <span>%</span></h3>     
+        `;
     }
-    showScore.innerHTML = `
-        <h3>${finalScore} <span>%</span></h3>     
-    `;
     showScore.classList.remove('scoreArea');
-    main.style.display = "flex"
-    main.style.justifyContent = "center";
-    main.style.alignItems = "center"
     showScore.style.display = 'flex';
     document.querySelector('.welcomeText').style.display = "none"
 }
@@ -775,4 +821,3 @@ answers.forEach(curAnsElem => {
 const deselectAll = () => {
     answers.forEach((curAnsElem) => curAnsElem.checked = false);
 };
-{/* <button class="btn" onclick="location.reload()">Play Again</button> */}
