@@ -179,6 +179,9 @@ nav{
 .logo img{
     width: 150px;
 }
+.logo img:hover{
+  cursor: pointer;
+}
 #profile{
     display: none;
     align-items: center;
@@ -347,12 +350,14 @@ h3{
 }
 
 #showScore{
+  margin: 0 auto;
   margin-top: 30px;
   padding: 30px 40px;
    text-align: center;
    justify-content: center;
    align-items: center;
    flex-direction: column;
+   width: 500px;
 }
 #showScore h3{
     margin-top: 30px;
@@ -361,23 +366,35 @@ h3{
     height: 250px;
     border-radius: 50%;
     text-align: center;
-    border-width: 80%;
     justify-content: center;
     align-items: center;
     display: flex;
-    color: #0d10ec;
-    border: 10px double #0d10ec;
+    color: #20831e;
+    border: 8px solid #20831e;
     font-size: 80px;
+    
 
 }
 #showScore span{
-  font-size: 50px;
+  font-size: 30px;
   margin-left: 10px;
 }
-#showScore p{
+#showScore>div{
   border-bottom: 1px solid rgb(187,187, 187);
-  padding: 20px 0px;
+  padding: 20px 5px;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  color: #0D6DB7;
+}
+.passedText{
+  color: #20831e !important;
+  font-size: 30px !important;
+}
+.failedText{
+  color: red !important;
+  font-size: 30px !important;
 }
 .scoreArea{
     display: none;
@@ -694,5 +711,8 @@ input[type="radio"]{
     }
     .user span{
       left: 85px;
+    }
+    #showScore{
+      width: 400px;
     }
 }

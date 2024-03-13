@@ -510,12 +510,16 @@ const main = document.querySelector('.main');
 const logo = document.querySelector('.logo');
 const scoreResult = document.getElementById("scorePercentage");
 
+
 let questionCount = -1;
 let score = 0;
 
 let timeLeft = 1500; // Time in seconds
 
 let timerInterval;
+
+nextButton.style.display = 'none';
+submitButton.style.display = 'none';
 
 document.getElementById("entrance").addEventListener("click", function() {
     document.getElementById("landingPage").style.display = "none";
@@ -631,6 +635,8 @@ function resetQuizState() {
 
 
 }
+
+// Hanlde Logout Function
 document.getElementById("logoutButton").addEventListener("click", function() {
     let popupContent = document.getElementById('popupContent');
 
@@ -643,6 +649,7 @@ document.getElementById("logoutButton").addEventListener("click", function() {
     swal("Logged Out!", "You have been logged out successfully.", "info");  
 });
 
+//  Handle Popup Content
 document.getElementById('profileArrow').addEventListener('click' , function(){
    let popupContent = document.getElementById('popupContent');
 
@@ -652,6 +659,8 @@ document.getElementById('profileArrow').addEventListener('click' , function(){
     popupContent.style.display = "block"
    }
 });
+
+// Handle Join buttons Function for render question according card
 
 joinButtons.forEach( button => {
     button.addEventListener('click', () => {
@@ -714,14 +723,26 @@ function formatTime(seconds) {
 }
 
 
-nextButton.style.display = 'none';
-submitButton.style.display = 'none';
 
-// 
+
+
 logo.addEventListener('click' , () => {
-    document.getElementById('websiteUI').scrollIntoView();
-
-})
+    
+    if(questionCount < 0){
+        document.querySelector('.cardContainer').style.display = "flex"
+        showScore.style.display = 'none';
+        document.querySelector('.innerDiv').style.display = 'none'
+        questionCount = -1;
+        score = 0;
+        clearInterval(timerInterval);
+        timeLeft = 1500; // Reset time
+        timerDisplay.textContent = formatTime(timeLeft);
+        startButton.style.display = "block";
+        nextButton.style.display = "none";
+        submitButton.style.display = "none";
+    }
+    
+    })
 
 // Load Question function 
 const loadQuestion = () => {
@@ -737,31 +758,44 @@ const loadQuestion = () => {
     } else {
         endQuiz();
     }
+    
 };
 
 // Start Quiz
 startButton.addEventListener('click', () => {
-    startButton.style.display = 'none';
-    nextButton.style.display = 'block';
-    loadQuestion();
-    startTimer();
-    deselectAll();
+    const checkedAnswer = getCheckedAnswer();
+    if(checkedAnswer === undefined){
+        alert("please Select any option")
+    }else{
+
+        startButton.style.display = 'none';
+        nextButton.style.display = 'block';
+        loadQuestion();
+        startTimer();
+        deselectAll();
+    }
 });
 
 // Next button click event
 nextButton.addEventListener('click', () => {
+    
     const checkedAnswer = getCheckedAnswer();
 // console.log(checkedAnswer)
-    if (checkedAnswer !== undefined) {
+    if (checkedAnswer === undefined){
+        alert("Please Select any option")
+    }else{
         const correctAnswer = quizDB[questionCount].ans;
         // console.log(correctAnswer)
         if (checkedAnswer === correctAnswer) {
             score++;
         }
+        loadQuestion();
+        deselectAll();
     }
+    // if (checkedAnswer !== undefined) {
+        
+    // }
 
-    loadQuestion();
-    deselectAll();
     if (questionCount === quizDB.length - 1) {
         nextButton.style.display = 'none';
         submitButton.style.display = 'block';
@@ -780,22 +814,44 @@ function endQuiz() {
 
     if(finalScore < "60"){
         showScore.innerHTML = `
-            <p>You Are Failed! &#128542;</p>
-            <p>Need More Practice </p>
+        <div>
+            <p class="failedText">You Are Failed! &#128542;</p>
+        </div>
+        <div>
+            <p>Total Questions</p>
+            <p>${quizDB.length}</p>
+        </div>
+        <div>
+            <p>Correct Questions</p>
+            <p>${score}</p>
+        </div>
             <h3 id="scorePercentage">${finalScore} <span>%</span></h3>     
         `;
         showScore.querySelector("h3").style.borderColor = "red"
         showScore.querySelector("h3").style.color = "red"
     }else{
         showScore.innerHTML = `
-            <p>Congrat's! &#128522;</p>
-            <p>You are Passed </p>
+        <div>
+
+            <p class="passedText">Congratulations, you passed! &#128522;</p>
+        </div>
+        <div>
+            <p>Total Questions</p>
+            <p>${quizDB.length}</p>
+
+        </div>
+        <div>
+            <p>Correct Questions</p>
+            <p>${score}</p>
+
+        </div>
             <h3>${finalScore} <span>%</span></h3>     
         `;
     }
     showScore.classList.remove('scoreArea');
     showScore.style.display = 'flex';
     document.querySelector('.welcomeText').style.display = "none"
+    questionCount = -1;
 }
 
 
