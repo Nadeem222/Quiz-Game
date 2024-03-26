@@ -34,16 +34,6 @@ html{
     flex-direction: column;
     justify-content: space-around;
 }
-.loginCon{
-    display: none;
-    width: 100%;
-    background-color: #c1e6ff;
-    background-image: linear-gradient(297deg, #c1e6ff 46%, #ffffff 100%);
-    height: 80%;
-    justify-content: center;
-    align-items: center;
-}
-
 .heading{
     font-size: 85px !important;
     color: #106FB8 !important;
@@ -70,97 +60,7 @@ html{
     font-size: 25px;
 }
 
-#loginForm {
-    text-align: center;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
-    margin: 0 auto;
-    background: rgba(0, 0, 0, 0.03);
-    border-radius: 16px;
 
-}
-#loginForm label,
-#loginForm input{
-    display: inline-block;
-   
-}
-#loginForm label{
-    width: 150px;
-    text-align: left;
-}
-.right, .left{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-
-    
-}
-.left img{
-  height: 100%;
-}
-.right{
-  height: 90%;
-  justify-content: center;
-
-}
-.right >p:first-child{
-  margin: 0px 0px 15px 0px;
-}
-
-#loginForm h2, #signupCard h2 {
-    color: #333;
-}
-.right p{
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-.right span{
-  font-size: 25px;
-  font-weight: 700;
-
-}
-.right small{
-  font-size: 20px;
-  color: #666;
-  margin-top: 20px;
-  cursor: pointer;
-}
-#loginForm input, #signupCard input {
-    width: 400px;
-    height: 50px;
-    margin: 5px;
-    padding: 5px 5px 5px 40px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 18px;
-}
-
-#loginForm button, #signupCard button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    margin: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 25px;
-    width: 390px;
-    padding: 10px 0px ;
-    margin: 0 auto;
-    margin-top: 10px;
-}
-.user{
-  position: relative;
-  width: 400px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-}
-.user span{
-  position: absolute;
-  left: 15px;
-}
 nav{
     font-family: "Josefin Sans", sans-serif;
     font-weight: 600;
@@ -309,7 +209,6 @@ h3{
     background-color: #fff;
     padding: 30px 80px;
     border-radius: 10px;
-    box-shadow: 0 10px 10px -7px rgba(0 , 0 , 0.4);
     display: none;
     width: 100%;
 }
