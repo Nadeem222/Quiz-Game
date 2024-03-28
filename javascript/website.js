@@ -488,9 +488,44 @@ const questionObj = {
     
 };
 
+const cardData = [
+    { title: "python", subject: 2  },
+    { title: "Web and App Crash Course", subject: 2 },
+    { title: "Web & App Development(Madaris)", subject: 3 , 
+        quizSubject:{
+        HTML: "HTML",
+        CSS: "CSS",
+        JAVASCRIPT: "JAVASCRIPT"
+     }, 
+    },
+    { title: "TypeScript", subject: 1 },
+    { title: "Web And Mobile Hybrid App Develpment", subject: 4 },
+    { title: "Generative AI & Chatbot Batch-3", subject: 1 } 
+];
+
 
 const quizDB = [];
 
+
+
+function createCard(){
+    for(key in cardData){
+        let cardDetail = cardData[key]
+        let title = cardDetail.title;
+        let subject = cardDetail.subject
+
+        document.querySelector(".cardContainer").innerHTML += `
+                    <div class="card">
+                    <h3>${title}</h3>
+                    <p >${subject} subjects</p>
+                    <button id="join">Join</button>
+                    </div>
+        `
+        
+        }
+    
+}
+createCard()
 
 // Selectors
 
@@ -512,6 +547,7 @@ const logo = document.querySelector('.logo');
 const scoreResult = document.getElementById("scorePercentage");
 
 
+
 const storedUsername = localStorage.getItem("username");
 const storedPassword = localStorage.getItem("password");
 
@@ -522,6 +558,7 @@ document.querySelector('.cardContainer').style.display = 'flex';
 document.getElementById('profileName').textContent = ` ${storedUsername} `
 document.getElementById('welcomeHeading').textContent = ` Hi! ${storedUsername} 👋 `
 
+// console.log(joinButtons)
 
 let questionCount = -1;
 let score = 0;
@@ -534,15 +571,9 @@ nextButton.style.display = 'none';
 submitButton.style.display = 'none';
 
 
-// Reset QUiz 
-// function resetQuizState() {
-//     questionCount = -1;
-//     score = 0;
-//     clearInterval(timerInterval);
-//     timeLeft = 1500; // Reset time
-//     timerDisplay.textContent = formatTime(timeLeft);
-    
-// }
+// Function for Create Cards
+
+
 
 // Hanlde Logout Function
 document.getElementById("logoutButton").addEventListener("click", function() {
@@ -574,42 +605,72 @@ document.getElementById('profileArrow').addEventListener('click' , function(){
 
 joinButtons.forEach( button => {
     button.addEventListener('click', () => {
-        document.querySelector('.cardContainer').style.display = "none"
-        showScore.style.display = 'none';
-        document.querySelector('.innerDiv').style.display = 'block'
-        document.querySelector("nav").style.display = "none"
-        document.querySelector('.welcomeText').style.display = "none";
-
-
-        quizDB.length = 0;
-        const cardId = event.target.id
-
-        if( cardId === "html"){
-            for(let key in questionObj.html){
-                const question = questionObj.html[key];
-                quizDB.push(question);
-            }
-        }else if(cardId === "css"){
-            for(let key in questionObj.css){
-                const question = questionObj.css[key];
-                quizDB.push(question);
-            }
-        }else if(cardId === "javascript"){
-            for(let key in questionObj.javascript){
-                const question = questionObj.javascript[key];
-                quizDB.push(question);
+       
+        let cardIndex = Array.from(button.parentNode.parentNode.children).indexOf(button.parentNode);
+        // console.log(cardIndex);
+        let cardDetail = cardData[cardIndex];
+        
+        // console.log(cardDetail)
+        
+        for(key in cardDetail){
+            
+            // console.log(`card Detail: ${cardDetail.quizSubject}`);
+            if(key === 'quizSubject'){
+                
+                
+                let quiz = cardDetail.quizSubject
+                
+                
+                
+                // console.log("Quiz:" + quiz)
+                for (key in quiz){
+                    let para = quiz[key]
+                    
+                    document.querySelector(".subject").innerHTML += `
+                    <p class="subjectPara" ><span><i class="fa-solid fa-angle-right"></i></span> ${para} </p>
+                    `
+                }
+                document.querySelector('.cardContainer').style.display = "none"
+                // document.querySelector('.innerDiv').style.display = 'block'
+                
             }
         }
-        loadQuestion();
-    startTimer();
-        // console.log(quizDB)
+
+
+    //     
     })
 })
 
 
 // localStorage.clear()
+subject.forEach(button => {
+    console.log(button)
+    button.addEventListener('click' , () => {
 
-
+       
+            console.log('hello');
+    
+            if( cardId === "html"){
+                for(let key in questionObj.html){
+                    const question = questionObj.html[key];
+                    quizDB.push(question);
+                }
+            }else if(cardId === "css"){
+                for(let key in questionObj.css){
+                    const question = questionObj.css[key];
+                    quizDB.push(question);
+                }
+            }else if(cardId === "javascript"){
+                for(let key in questionObj.javascript){
+                    const question = questionObj.javascript[key];
+                    quizDB.push(question);
+                }
+            }
+            loadQuestion();
+        startTimer();
+            console.log(quizDB)
+    })
+})
 
 
 function startTimer() {

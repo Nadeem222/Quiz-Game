@@ -205,6 +205,18 @@ h3{
     flex-wrap: wrap;
     justify-content: center;
 }
+.subject p{
+  background-color: #F4F4F4;
+  padding: 30px 40px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 18px;
+  color: rgb(68, 68, 68);
+  border: 1px solid #DDDDDD;
+}
+.subject p:hover{
+  background-color: #DDDDDD;
+}
 .innerDiv{
     background-color: #fff;
     padding: 30px 80px;
