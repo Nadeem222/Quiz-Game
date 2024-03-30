@@ -54,7 +54,7 @@
   margin-bottom: 10px;
 }
 .right span{
-  font-size: 25px;
+  font-size: 18px;
   font-weight: 700;
 
 }
@@ -97,4 +97,52 @@
 .user span{
   position: absolute;
   left: 15px;
+}
+
+
+
+@media screen and (max-width: 600px){
+
+  .loginCon{
+    flex-direction: column;
+    margin-top: 70px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+  }
+  #loginForm{
+    flex-direction: column;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    border-radius: 16px 16px 0px 0px;
+  }
+  #landingPage{
+    height: 100%;
+    margin-top: 80px;
+  }
+  .heading{
+    font-size: 50px !important;
+  }
+  #landingPage p{
+    font-size: 18px;
+  }
+  .startText{
+    font-size: 20px !important;
+  }
+  .left{
+    display: none;
+  }
+  .right{
+    width: 100%;
+    padding: 20px 5px;
+  }
+  #loginForm input, #signupCard input , #loginForm button , #signupCard button{
+    width: 250px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+  }
+  .user span{
+    left: 85px;
+  }
 }

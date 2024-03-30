@@ -299,6 +299,16 @@ h3{
   font-weight: 600;
   color: #0D6DB7;
 }
+#showScore button{
+  padding: 20px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 800;
+    margin-top: 30px;
+    background-color: #275EFE;
+    color: #fff;
+}
 .passedText{
   color: #20831e !important;
   font-size: 30px !important;
@@ -577,51 +587,12 @@ input[type="radio"]{
     #websiteUI{
       margin-top: 70px;
     }
-    .loginCon{
-      flex-direction: column;
-      margin-top: 70px;
-      width: 100%;
-      height: 100%;
-      padding: 20px;
-    }
-    #loginForm{
-      flex-direction: column;
-      margin-top: 100px;
-      width: 100%;
-    }
-    #landingPage{
-      height: 100%;
-      margin-top: 80px;
-    }
-    .heading{
-      font-size: 50px !important;
-    }
-    #landingPage p{
-      font-size: 18px;
-    }
-    .startText{
-      font-size: 20px !important;
-    }
-    .left{
-      display: none;
-    }
-    .right{
-      width: 100%;
-      padding: 20px 5px;
-    }
+    
     .innerDiv{
       padding: 15px 25px;
     }
     .innerDiv h2 , .innerDiv li{
       font-size: 18px;
-    }
-    #loginForm input, #signupCard input , #loginForm button , #signupCard button{
-      width: 250px;
-      margin: 0 auto;
-      margin-bottom: 5px;
-    }
-    .user span{
-      left: 85px;
     }
     #showScore{
       width: 400px;

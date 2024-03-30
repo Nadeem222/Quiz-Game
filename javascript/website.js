@@ -176,7 +176,7 @@ const questionObj = {
             b: "text-color",
             c: "font-color",
             d: "foreground-color",
-            ans: "ans1"
+            ans: "a"
         },
         Q3: {
             question: "Q3: Which CSS property is used to change the background color of an element?",
@@ -184,7 +184,7 @@ const questionObj = {
             b: "background-color",
             c: "color",
             d: "background",
-            ans: "ans2"
+            ans: "b"
         },
         Q4: {
             question: "Q4: Which CSS property is used to set the text formatting to italic?",
@@ -192,7 +192,7 @@ const questionObj = {
             b: "text-style",
             c: "italic",
             d: "font-italic",
-            ans: "ans1"
+            ans: "a"
         },
         Q5: {
             question: "Q5: Which CSS property is used to create rounded corners on an element?",
@@ -200,7 +200,7 @@ const questionObj = {
             b: "rounded-corners",
             c: "corner-radius",
             d: "border-style",
-            ans: "ans1"
+            ans: "a"
         },
         Q6: {
             question: "Q6: Which CSS property is used to add shadows to text?",
@@ -208,7 +208,7 @@ const questionObj = {
             b: "shadow",
             c: "text-effect",
             d: "text-styling",
-            ans: "ans1"
+            ans: "a"
         },
         Q7: {
             question: "Q7: Which CSS property is used to change the size of text?",
@@ -216,7 +216,7 @@ const questionObj = {
             b: "text-size",
             c: "size",
             d: "font-style",
-            ans: "ans1"
+            ans: "a"
         },
         Q8: {
             question: "Q8: Which CSS property is used to set the spacing between lines of text?",
@@ -224,7 +224,7 @@ const questionObj = {
             b: "text-spacing",
             c: "line-spacing",
             d: "spacing",
-            ans: "ans1"
+            ans: "a"
         },
         Q9: {
             question: "Q9: Which CSS property is used to specify the type of cursor to be displayed when pointing on an element?",
@@ -232,7 +232,7 @@ const questionObj = {
             b: "cursor-type",
             c: "pointer",
             d: "cursor",
-            ans: "ans4"
+            ans: "d"
         },
         Q10: {
             question: "Q10: Which CSS property is used to align text horizontally?",
@@ -240,7 +240,7 @@ const questionObj = {
             b: "align-text",
             c: "text-position",
             d: "horizontal-align",
-            ans: "ans1"
+            ans: "a"
         },
         Q11: {
             question: "Q11: Which CSS property is used to create an underline on text?",
@@ -248,7 +248,7 @@ const questionObj = {
             b: "underline",
             c: "text-underline",
             d: "decorative-text",
-            ans: "ans1"
+            ans: "a"
         },
         Q12: {
             question: "Q12: Which CSS property is used to control the visibility of an element?",
@@ -256,7 +256,7 @@ const questionObj = {
             b: "display",
             c: "visibility",
             d: "show",
-            ans: "ans3"
+            ans: "c"
         },
         Q13: {
             question: "Q13: Which CSS property is used to set the thickness of the border?",
@@ -264,7 +264,7 @@ const questionObj = {
             b: "border-width",
             c: "thickness",
             d: "border-thickness",
-            ans: "ans2"
+            ans: "b"
         },
         Q14: {
             question: "Q14: Which CSS property is used to set the style of the border?",
@@ -272,7 +272,7 @@ const questionObj = {
             b: "style",
             c: "border",
             d: "border-styling",
-            ans: "ans1"
+            ans: "a"
         },
         Q15: {
             question: "Q15: Which CSS property is used to control the spacing between individual characters?",
@@ -280,7 +280,7 @@ const questionObj = {
             b: "character-spacing",
             c: "text-spacing",
             d: "spacing",
-            ans: "ans1"
+            ans: "a"
         },
         Q16: {
             question: "Q16: Which CSS property is used to control the appearance of an element when the user mouses over it?",
@@ -288,7 +288,7 @@ const questionObj = {
             b: "mouse-over",
             c: "mouseover",
             d: "hovering",
-            ans: "ans1"
+            ans: "a"
         },
         Q17: {
             question: "Q17: Which CSS property is used to set the width of an element?",
@@ -296,7 +296,7 @@ const questionObj = {
             b: "element-width",
             c: "size",
             d: "width-size",
-            ans: "ans1"
+            ans: "a"
         },
         Q18: {
             question: "Q18: Which CSS property is used to set the height of an element?",
@@ -304,7 +304,7 @@ const questionObj = {
             b: "element-height",
             c: "size",
             d: "height-size",
-            ans: "ans1"
+            ans: "a"
         },
         Q19: {
             question: "Q19: Which CSS property is used to specify the space between the borders and the content of an element?",
@@ -312,7 +312,7 @@ const questionObj = {
             b: "spacing",
             c: "margin",
             d: "border-spacing",
-            ans: "ans1"
+            ans: "a"
         },
         Q20: {
             question: "Q20: Which CSS property is used to set the transparency of an element?",
@@ -320,7 +320,7 @@ const questionObj = {
             b: "opacity",
             c: "alpha",
             d: "transparent",
-            ans: "ans2"
+            ans: "b"
         }
     },
     javascript:{
@@ -330,7 +330,7 @@ const questionObj = {
             b: "JavaSuper",
             c: "JustScript",
             d: "Jupiter",
-            ans: "ans1"
+            ans: "a"
         },
         Q2: {
             question: "Q2: Which of the following is NOT a valid JavaScript variable name?",
@@ -338,7 +338,7 @@ const questionObj = {
             b: "_myVar",
             c: "$myVar",
             d: "myVar2",
-            ans: "ans1"
+            ans: "a"
         },
         Q3: {
             question: "Q3: What type of language is JavaScript?",
@@ -346,7 +346,7 @@ const questionObj = {
             b: "Procedural",
             c: "Functional",
             d: "All of the above",
-            ans: "ans4"
+            ans: "d"
         },
         Q4: {
             question: "Q4: What keyword is used to declare variables in JavaScript?",
@@ -354,7 +354,7 @@ const questionObj = {
             b: "let",
             c: "const",
             d: "variable",
-            ans: "ans1"
+            ans: "a"
         },
         Q5: {
             question: "Q5: Which of the following is NOT a valid way to declare a JavaScript function?",
@@ -362,7 +362,7 @@ const questionObj = {
             b: "myFunction = function() {}",
             c: "myFunction() {}",
             d: "const myFunction = () => {}",
-            ans: "ans3"
+            ans: "c"
         },
         Q6: {
             question: "Q6: Which function is used to print data in the console?",
@@ -370,7 +370,7 @@ const questionObj = {
             b: "console.write()",
             c: "console.log()",
             d: "console.display()",
-            ans: "ans3"
+            ans: "c"
         },
         Q7: {
             question: "Q7: What is the result of 5 + '5' in JavaScript?",
@@ -378,7 +378,7 @@ const questionObj = {
             b: "'55'",
             c: "'10'",
             d: "Error",
-            ans: "ans2"
+            ans: "b"
         },
         Q8: {
             question: "Q8: What does the `typeof` operator return for a function?",
@@ -386,7 +386,7 @@ const questionObj = {
             b: "'object'",
             c: "'undefined'",
             d: "'string'",
-            ans: "ans1"
+            ans: "a"
         },
         Q9: {
             question: "Q9: Which of the following is NOT a JavaScript data type?",
@@ -394,7 +394,7 @@ const questionObj = {
             b: "integer",
             c: "symbol",
             d: "array",
-            ans: "ans2"
+            ans: "b"
         },
         Q10: {
             question: "Q10: Which symbol is used for single-line comments in JavaScript?",
@@ -402,7 +402,7 @@ const questionObj = {
             b: "/*",
             c: "**",
             d: "--",
-            ans: "ans1"
+            ans: "a"
         },
         Q11: {
             question: "Q11: Which function is used to parse a string and return an integer?",
@@ -410,7 +410,7 @@ const questionObj = {
             b: "stringToInt()",
             c: "toInteger()",
             d: "strToInt()",
-            ans: "ans1"
+            ans: "a"
         },
         Q12: {
             question: "Q12: What is the JavaScript operator for exponentiation?",
@@ -418,7 +418,7 @@ const questionObj = {
             b: "**",
             c: "^^",
             d: "expt()",
-            ans: "ans2"
+            ans: "b"
         },
         Q13: {
             question: "Q13: What will the following code output: console.log(typeof null);?",
@@ -426,7 +426,7 @@ const questionObj = {
             b: "'object'",
             c: "'undefined'",
             d: "'string'",
-            ans: "ans2"
+            ans: "b"
         },
         Q14: {
             question: "Q14: What is the purpose of the `===` operator in JavaScript?",
@@ -434,7 +434,7 @@ const questionObj = {
             b: "Checks for equality without type conversion",
             c: "Assigns a value to a variable",
             d: "None of the above",
-            ans: "ans2"
+            ans: "b"
         },
         Q15: {
             question: "Q15: What does the `isNaN()` function do in JavaScript?",
@@ -442,7 +442,7 @@ const questionObj = {
             b: "Returns true if the argument is a number",
             c: "Returns true if the argument is null",
             d: "Returns true if the argument is NaN",
-            ans: "ans1"
+            ans: "a"
         },
         Q16: {
             question: "Q16: Which function is used to add or remove elements from an array?",
@@ -450,7 +450,7 @@ const questionObj = {
             b: "slice()",
             c: "push()",
             d: "pop()",
-            ans: "ans1"
+            ans: "a"
         },
         Q17: {
             question: "Q17: What does the `map()` function do in JavaScript?",
@@ -458,7 +458,7 @@ const questionObj = {
             b: "Concatenates two arrays",
             c: "Returns the first index at which a given element can be found in the array",
             d: "Checks if all elements in an array pass a test",
-            ans: "ans1"
+            ans: "a"
         },
         Q18: {
             question: "Q18: Which method is used to join two or more arrays?",
@@ -466,7 +466,7 @@ const questionObj = {
             b: "join()",
             c: "merge()",
             d: "combine()",
-            ans: "ans1"
+            ans: "a"
         },
         Q19: {
             question: "Q19: What does the `this` keyword refer to in JavaScript?",
@@ -474,7 +474,7 @@ const questionObj = {
             b: "Refers to the parent function",
             c: "Refers to the global object",
             d: "Refers to the current object",
-            ans: "ans4"
+            ans: "d"
         },
         Q20: {
             question: "Q20: What is the purpose of the `querySelector()` method in JavaScript?",
@@ -482,7 +482,7 @@ const questionObj = {
             b: "Selects all elements that match a specified CSS selector",
             c: "Selects the last element that matches a specified CSS selector",
             d: "Selects elements based on their class names",
-            ans: "ans1"
+            ans: "a"
         }
     }
     
@@ -545,6 +545,7 @@ const result = document.getElementsByClassName('result');
 const main = document.querySelector('.main');
 const logo = document.querySelector('.logo');
 const scoreResult = document.getElementById("scorePercentage");
+const subjectCon = document.querySelector(".subject");
 
 
 
@@ -605,6 +606,7 @@ document.getElementById('profileArrow').addEventListener('click' , function(){
 
 joinButtons.forEach( button => {
     button.addEventListener('click', () => {
+        subjectCon.innerHTML = "";
        
         let cardIndex = Array.from(button.parentNode.parentNode.children).indexOf(button.parentNode);
         // console.log(cardIndex);
@@ -626,12 +628,11 @@ joinButtons.forEach( button => {
                 for (key in quiz){
                     let para = quiz[key]
                     
-                    document.querySelector(".subject").innerHTML += `
-                    <p class="subjectPara" ><span><i class="fa-solid fa-angle-right"></i></span> ${para} </p>
+                    subjectCon.innerHTML += `
+                    <p class="subjectPara" onclick="renderQuiz()"><span><i class="fa-solid fa-angle-right"></i></span> ${para} </p>
                     `
                 }
                 document.querySelector('.cardContainer').style.display = "none"
-                // document.querySelector('.innerDiv').style.display = 'block'
                 
             }
         }
@@ -643,34 +644,39 @@ joinButtons.forEach( button => {
 
 
 // localStorage.clear()
-subject.forEach(button => {
-    console.log(button)
-    button.addEventListener('click' , () => {
 
-       
-            console.log('hello');
+
+function renderQuiz(){
+        let cardId = event.target.textContent;
+        console.log(cardId)
     
-            if( cardId === "html"){
-                for(let key in questionObj.html){
-                    const question = questionObj.html[key];
-                    quizDB.push(question);
-                }
-            }else if(cardId === "css"){
-                for(let key in questionObj.css){
-                    const question = questionObj.css[key];
-                    quizDB.push(question);
-                }
-            }else if(cardId === "javascript"){
-                for(let key in questionObj.javascript){
-                    const question = questionObj.javascript[key];
-                    quizDB.push(question);
-                }
+        if( cardId.toLowerCase().trim() === "html"){
+
+            for(let key in questionObj.html){
+                const question = questionObj.html[key];
+                quizDB.push(question);
             }
-            loadQuestion();
+        }else if(cardId.toLowerCase().trim() === "css"){
+            for(let key in questionObj.css){
+                const question = questionObj.css[key];
+                quizDB.push(question);
+            }
+        }else if(cardId.toLowerCase().trim() === "javascript"){
+            for(let key in questionObj.javascript){
+                const question = questionObj.javascript[key];
+                quizDB.push(question);
+            }
+        }
+        subjectCon.style.display = "none"
+        document.querySelector('.innerDiv').style.display = 'block'
+        document.querySelector("nav").style.display = "none"
+        document.querySelector('.welcomeText').style.display = "none"
+        loadQuestion();
         startTimer();
-            console.log(quizDB)
-    })
-})
+        console.log(quizDB)
+
+}
+           
 
 
 function startTimer() {
@@ -698,7 +704,23 @@ function formatTime(seconds) {
 
 
 
+function resetQuiz(){
+        document.querySelector('.cardContainer').style.display = "flex"
+        showScore.style.display = 'none';
+        document.querySelector('.innerDiv').style.display = 'none'
+        questionCount = -1;
+        score = 0;
+        clearInterval(timerInterval);
+        timeLeft = 1500; // Reset time
+        timerDisplay.textContent = formatTime(timeLeft);
+        startButton.style.display = "block";
+        nextButton.style.display = "none";
+        submitButton.style.display = "none";
+        document.querySelector("nav").style.display = "block"
+        document.querySelector('.welcomeText').style.display = "block"
+        subjectCon.style.display = "block"
 
+}
 
 logo.addEventListener('click' , () => {
     
@@ -714,6 +736,8 @@ logo.addEventListener('click' , () => {
         startButton.style.display = "block";
         nextButton.style.display = "none";
         submitButton.style.display = "none";
+        subjectCon.style.display = "block"
+
     }
     
     })
@@ -796,7 +820,8 @@ function endQuiz() {
             <p>Correct Questions</p>
             <p>${score}</p>
         </div>
-            <h3 id="scorePercentage">${finalScore} <span>%</span></h3>     
+            <h3 id="scorePercentage">${finalScore} <span>%</span></h3>
+            <button onclick="resetQuiz()">Back to Home</button>     
         `;
         showScore.querySelector("h3").style.borderColor = "red"
         showScore.querySelector("h3").style.color = "red"
@@ -816,14 +841,16 @@ function endQuiz() {
             <p>${score}</p>
 
         </div>
-            <h3>${finalScore} <span>%</span></h3>     
+            <h3>${finalScore} <span>%</span></h3>   
+            <button onclick="resetQuiz()">Back to Home</button>  
         `;
     }
     showScore.classList.remove('scoreArea');
     showScore.style.display = 'flex';
-    document.querySelector('.welcomeText').style.display = "none"
     questionCount = -1;
-    document.querySelector("nav").style.display = "none"
+    subjectCon.style.display = "block"
+
+    
 
 }
 
